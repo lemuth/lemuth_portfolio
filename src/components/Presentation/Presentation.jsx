@@ -6,9 +6,9 @@ import mysterion from "@/assets/img/mysterion.png"
 
 export default function Presentation(){
     return(
-        <div className="md:w-[65%] w-full relative flex-col justify-center items-center p-16 md:mt-20 mt-0 shadow-xl">
+        <div className="md:w-[65%] w-full relative flex-col justify-center items-center p-4 md:p-16 md:mt-20 mt-0 shadow-xl md:pt-32 pt-0">
             <div className="w-full pb-4 text-4xl text-redTitle font-semibold">Pour me présenter</div>
-            <div>
+            <div className="w-full">
                 <Image
                     src={portrait}
                     width={85}
@@ -23,7 +23,7 @@ export default function Presentation(){
                     <p>{'Lassé par le travail en solitaire, je souhaite aujourd\'hui rejoindre une équipe pour continuer à évoluer, partager mes connaissances et répondre aux besoins des clients, bien sûr ! Si mon profil correspond à ce que vous recherchez, n\'hésitez pas à me contacter et nous aurons le loisir d\'en discuter.'} </p>
                 </div>
             </div>
-            <div className="absolute z-10 top-0 right-[-13rem] bg-yellowTheme rotate-12">
+            <div className=" md:absolute z-10 top-0 right-10 md:right-[-13rem] bg-yellowTheme rotate-12">
                 <Image src={trombone} width={45} alt="trombone" className="translate-x-28 translate-y-[-1.2rem]" />
                 <Image src={mysterion} width={100} alt="mysterion" className="rotate-12 float-right pr-4 duration-500 transition transform scale-100 hover:scale-125" />
                 <div className="m-6">

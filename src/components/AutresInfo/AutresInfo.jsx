@@ -13,7 +13,7 @@ const playwriteHRLijeva = localFont({
 export default function AutresInfo() {
     return (
             <div className="flex flex-col md:flex-row justify-center w-[100%] md:w-[80%] items-center p-6 mt-20 md:mt-40 relative">
-                <div className="md:w-[450px] md:h-[518px] w-[305px] h-[556px] m-4 py-10 justify-center items-center relative bg-paper1 bg-cover">
+                <div className="md:w-[450px] md:h-[518px] w-full h-[556px] m-4 py-10 justify-center items-center relative  bg-cover">
                     <div className="flex w-full border-b-2 pt-4 justify-end">
                         <p className="flex items-center md:text-3xl text-xl font-semibold">Les petits</p>
                         <Image src={addLogo} width={85} alt="addLogo" />
@@ -30,12 +30,12 @@ export default function AutresInfo() {
                     </div>
                 </div>
         
-                <div className="md:w-[450px] md:h-[518px] w-[305px] h-[556px] m-4 px-8 py-10 justify-center items-center relative bg-paper2 bg-cover">
+                <div className="md:w-[450px] md:h-[518px] w-full h-[556px] m-4 px-8 py-10 justify-center items-center relative  bg-cover">
                     <div className="flex w-full border-b-2 pt-8 justify-end">
                         <p className="flex items-center md:text-3xl text-xl font-semibold">Les petits</p>
                         <Image src={soustractLogo} width={85} alt="addLogo" />
                     </div>
-                    <div className={`flex-col w-full font-light text-end p-6  text-sm md:text-bas ${playwriteHRLijeva.className}`}>
+                    <div className={`flex-col w-full font-light text-end p-2 md:p-6  text-sm md:text-bas ${playwriteHRLijeva.className}`}>
                         <p className="py-1 px-2">- A la tête dur</p>
                         <p className="py-1 px-2">{"- Pas d'expèriences de très gros projet"}</p>
                         <p className="py-1 px-2">- Supporter mes références sur les années 90</p>

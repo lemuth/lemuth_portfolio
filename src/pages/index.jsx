@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <main
-      className={`flex flex-col justify-center items-center w-full h-full ${arsenal.className}`}
+      className={`flex flex-col justify-center items-center min-w-screen w-full h-full ${arsenal.className} bg-white`}
     >
       <Head>
         <title>{"Lémuth's Portfolio"}</title>

@@ -32,9 +32,9 @@ export default function Carousel(props){
                                 <div>
                                     <p>Mes Expériences</p>
                                 </div>
-                                <div className="flex justify-between pb-6">
-                                    <p className='text-4xl font-semibold'>{value.intitule}</p>
-                                    <p className='text-5xl text-redTitle'>{value.periode}</p>
+                                <div className="flex md:flex-row flex-col justify-between pb-6">
+                                    <p className='md:text-4xl text-2xl font-semibold'>{value.intitule}</p>
+                                    <p className='md:text-5xl text-3xl text-redTitle'>{value.periode}</p>
                                 </div>
                                 <div className='flex md:flex-row flex-col w-[100%] h-full'>
                                     <div className='flex-col md:w-1/3 w-full p-4 ml-4'>
@@ -49,14 +49,13 @@ export default function Carousel(props){
                                             </div>
                                             <p className='pt-6 font-s'>{value.prez}</p>
                                         </div>
-                                        <div className='flex justify-center md:pt-6 pt-0'>
+                                        <div className='flex justify-center md:pt-6 pt-0 w-full'>
                                             {
                                                 value.technos.map((item, key2) => {
-                                                    let color = item.name
                                                     return(
-                                                        <div key={key2} className='flex-col justify-center mr-2 items-center px-2 w-14'>
-                                                            <p className='text-sm text-center font-semibold w-full pb-2'>{item.name}</p>
-                                                            <div className={`bg-redTitle rounded-br-xl w-10 px-4 rounded-bl-xl ${item.level === '3' ? "h-16" : item.level === "4" ? "h-24" : "h-10"} shadow-md shadow-gray-400`} />
+                                                        <div key={key2} className='flex-col justify-center mr-2 items-center px-0 md:px-2 w-14'>
+                                                            <p className='text-sm text-center font-light md:font-semibold w-full pb-2'>{item.name}</p>
+                                                            <div className={`bg-redTitle rounded-br-xl w-6 md:w-10 px-4 rounded-bl-xl ${item.level === '3' ? "h-16" : item.level === "4" ? "h-24" : "h-10"} shadow-md shadow-gray-400`} />
                                                         </div>
                                                     )
                                                 })
