@@ -44,7 +44,7 @@ const experiencesData = [
         type: "Freelance",
         duree: "1an",
         intitule: "Shopping Winner",
-        prez: "Application de mise en relation entre commercants locaux et clients. Maintenance et corrections avant lancement de la V1. Développement de fonctionnalités supplémentaires( module de paiement, localisation GPS, etc...)",
+        prez: "Application de mise en relation entre commerçants locaux et clients. Maintenance et corrections avant lancement de la V1. Développement de fonctionnalités supplémentaires ( module de paiement, localisation GPS, etc...)",
         technos: [{name:'Javascript', level: '4'}, {name:'Angular', level: '3'}, {name: 'Sql', level: 3}],
         images: [shoppingW1, shoppingW2, shoppingW3],
     },
@@ -64,7 +64,7 @@ const experiencesData = [
         type: "Freelance",
         duree: "2mois",
         intitule: "Betech",
-        prez: "Petite application pour un bureau d'étude en électricité, permet l'échange d'information en temps réel sur les détails d'un chantier pour optimiser la communication entre le bureau d'étude et les opérateurs sur le terrain",
+        prez: "Petite application pour un bureau d'étude en électricité, permet l'échange d'informations en temps réel sur les détails d'un chantier pour optimiser la communication entre le bureau d'étude et les opérateurs sur le terrain",
         technos: [{name:'React-Native', level: '3'}, {name:'Firebase', level: '2'}],
         images: [betech1, betech2],
     },
@@ -74,7 +74,7 @@ const experiencesData = [
         type: "Freelance",
         duree: "1an",
         intitule: "Evalli",
-        prez: "Application (PWA) de coaching Sportif et bien-être. Récriture de la V1, de Flutter à React, refonte complète de l'interface. Conception et intégration du design/UX. Ajouts de fonctionnalités",
+        prez: "Application (PWA) de coaching Sportif et bien-être. Réécriture de la V1, de Flutter à React, refonte complète de l'interface. Conception et intégration du design/UX. Ajouts de fonctionnalités",
         technos: [{name:'NextJs', level: '3'}, {name:'React', level: '3'}, {name:'Redux', level: '2'}, {name: 'Tailwind', level: 3}],
         images: [evalli1, evalli2, evalli3]
     },
@@ -84,7 +84,7 @@ const experiencesData = [
         type: "Freelance",
         duree: "3mois",
         intitule: "Peuch Configurator",
-        prez: "Création d'un Show-Room virtuel en 3D, qui permet la création personnalisé d'un habillage d'ascenceur parmis les options disponible",
+        prez: "Création d'un Show-Room virtuel en 3D, qui permet la création personnalisée d'un habillage d'ascenseur parmi les options disponibles",
         technos: [{name:'NextJs', level: '3'}, {name:'React', level: '3'}, {name:'ThreeJs', level: '2'}, {name: '3DsMax', level:'3'}],
         link: "https://peuch-configurator-tgmlf.ondigitalocean.app/",
     },
@@ -107,7 +107,7 @@ export default function Experiences(){
     return (
         <div className="md:w-[65%] w-full flex-col justify-center items-center p-6 md:mt-40 mt-5 shadow-xl relative">
             <Carousel slides={experiencesData.sort((a,b) => {return b.annee - a.annee})} options={options} />
-            <div className="absolute left-[-20px] bottom-8">
+            <div className="absolute left-[-20px] bottom-8 ease-in duration-100 transition transform hover:-translate-y-10 hover:translate-x-3">
                 <Image src={kenny} width={150} alt="kenny" />
             </div>
         </div>

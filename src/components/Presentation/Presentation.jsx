@@ -25,12 +25,12 @@ export default function Presentation(){
             </div>
             <div className="absolute z-10 top-0 right-[-13rem] bg-yellowTheme rotate-12">
                 <Image src={trombone} width={45} alt="trombone" className="translate-x-28 translate-y-[-1.2rem]" />
-                <Image src={mysterion} width={100} alt="mysterion" className="rotate-12 float-right pr-4" />
+                <Image src={mysterion} width={100} alt="mysterion" className="rotate-12 float-right pr-4 duration-500 transition transform scale-100 hover:scale-125" />
                 <div className="m-6">
                     <p className="pb-4 text-lg">@Contact:</p>
-                    <div className="flex">
+                    <div className="flex duration-500 transition transform scale-100 hover:scale-125">
                         <Image src={mailIcon} width={25} alt="phoneIcon" />
-                        <p>{"gilles.saley@gmail.com"}</p>
+                        <a href="mailto:gilles.saley@gmail.com">{"gilles.saley@gmail.com"}</a>
                     </div>
                 </div>
             </div>

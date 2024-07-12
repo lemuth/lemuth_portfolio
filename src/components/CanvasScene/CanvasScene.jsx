@@ -36,70 +36,70 @@ const pannelData =[
         img: jsIcon,
         title: 'JavaScript',
         level: 4,
-        content: 'Javascript et le language principal dans tout mes projets depuis que je code. J\'aime suivre ses nombreuses évolutions et adapter mon code en conséquences.',
+        content: 'Javascript et le langage principal dans tous mes projets depuis que je code. J\'aime suivre ses nombreuses évolutions et adapter mon code en conséquences.',
     },
     {
         id: 2,
         img: photoshopIcon,
         title: 'Photoshop',
         level: 3,
-        content: 'J\'utilisais Photoshop avant de savoir coder ! Détourage, modifications, format d\'images je connais assez bien Photoshop pour me sentir libre dans mon travail.',
+        content: 'J\'utilisais Photoshop avant de savoir coder ! Détourage, modifications, format d\'images, je connais assez bien Photoshop pour me sentir libre dans mon travail.',
     },
     {
         id: 3,
         img: sqlIcon,
         title: 'SQL',
         level: 4,
-        content: 'Le Sql est un language que j\'ai souvent utilisé dans ma pratique du développement-web.',
+        content: 'Le Sql est un langage que j\'ai souvent utilisé dans ma pratique du développement-web.',
     },
     {
         id:4,
         img: mongoIcon,
         title: 'MongoDB',
         level: 3,
-        content: 'Je n\'ai travaillé que sur des projets perso avec MongoDB, mais son format javascript friendly me permet de l\'apprehender rapidement.',
+        content: 'Je n\'ai travaillé que sur des projets perso avec MongoDB, mais son format javascript friendly me permet de l\'appréhender rapidement.',
     },
     {
         id: 5,
         img: nextIcon,
         title: 'NextJs',
         level: 3,
-        content: 'Je travaille sur tout mes projets depuis deux ans avec NextJs. Il est vite devenue un incoutournable pour moi.',
+        content: 'Je travaille sur tous mes projets depuis deux ans avec NextJs. Il est vite devenu un incontournable pour moi.',
     },
     {
         id: 6,
         img: htmlIcon,
         title: 'Html',
         level: 4,
-        content: 'Je pratique le language Html depuis le déut de mon aventure de codeur. Je suis sùr que je n\'en connais pas toutes les subtilités, mais on se connais bien lui et Moi.'
+        content: 'Je pratique le langage Html depuis le début de mon aventure de codeur. Je suis sûr que je n\'en connais pas toutes les subtilités, mais on se connait bien lui et Moi.'
     },
     {
         id: 7,
         img: threeIcon,
         title: 'ThreeJs',
         level: 2,
-        content: 'J\'aime particulièrement la 3d puisque je modélise mes propres meshs et concois mes textures, ThreeJs me permet de mettre mes compétences en 3D au service du web.',
+        content: 'J\'aime particulièrement la 3d puisque je modélise mes propres meshs et conçois mes textures, ThreeJs me permet de mettre mes compétences en 3D au service du web.',
     },
     {
         id: 8,
         img: typescriptIcon,
         title: 'TypeScript',
         level: 2,
-        content: 'J\'ai intégré Typescript dans mes derniers projets perso. Je ne suis pas encore familié avec mais j\'en connais les Bases.',
+        content: 'J\'ai intégré Typescript dans mes derniers projets perso. Je ne suis pas encore familier avec, mais j\'en connais les Bases.',
     },
     {
         id: 9,
         img: reactIcon,
         title: 'React',
         level: 4,
-        content: 'J\'intègre React dans tout mes prjets depuis 4 ans, j\'ai l\'habitude de manipuler ses Hooks, et j\'aime également la library Redux.',
+        content: 'J\'intègre React dans tout mes projets depuis 4 ans, j\'ai l\'habitude de manipuler ses Hooks, et j\'aime également la library Redux.',
     },
     {
         id: 10,
         img: tailwindIcon,
         title: 'Tailwind',
         level: 3,
-        content: 'Je travail avec Tailwind dans tout mes projets depuis 2 ans.',
+        content: 'Je travaille avec Tailwind dans tous mes projets depuis 2 ans.',
     },
     {
         id: 11,
@@ -113,7 +113,7 @@ const pannelData =[
         img: nodeIcon,
         title: 'NodeJs',
         level: 3,
-        content: 'Je pratique les serveurs NodeJs depuis 5 ans. Je connais bien ExpressJs, Firebase, et ai un peu pratiqué récement un contexte NestJs.',
+        content: 'Je pratique les serveurs NodeJs depuis 5 ans. Je connais bien ExpressJs, Firebase, et ai un peu pratiqué récemment un contexte NestJs.',
     },
 ]
 
@@ -237,11 +237,11 @@ export default function CanvasScene() {
             </div>
             {/* Rideau */}
             <div className={`flex absolute w-full h-full ${isOpen ? 'hidden' : 'show'}`} onClick={() => start()}>
-            <button className={`px-8 py-4 bg-white text-gray-500 shadow-lg shadow-black ${arsenal.className} animate-pulse rounded-lg absolute top-[45%] left-[48%] z-20 ${openingLat && "hidden"}`}>Ouvrir</button>
-            <Image src={rideauTop} alt="rideauLateralTop" className={`w-1/2 h-1/6 absolute z-10 ${openingTop && "transition-all duration-400 ease-in translate-y-[-100%]"}`} />
-            <Image src={rideauTop} alt="rideauLateralTop" className={`w-1/2 h-1/6 absolute z-10 right-0 ${openingTop && "transition-all duration-400 ease-in translate-y-[-100%]"}`} />
-            <Image src={rideauLat} alt="rideauLateralLeft" className={`w-1/2 h-full ${openingLat && "transition-all duration-1000 ease-in translate-x-[-100%]"}`} />
-            <Image src={rideauLat} alt="rideauLateralRight" className={`w-1/2 h-full ${openingLat && "transition-all duration-1000 ease-in translate-x-[100%]"}`}  />
+                <button className={`px-8 py-4 bg-white text-gray-500 shadow-lg shadow-black ${arsenal.className} animate-pulse rounded-lg absolute top-[45%] left-[48%] z-20 ${openingLat && "hidden"}`}>Ouvrir</button>
+                <Image src={rideauTop} alt="rideauLateralTop" className={`w-1/2 h-1/6 absolute z-10 ${openingTop && "transition-all duration-400 ease-in translate-y-[-100%]"}`} />
+                <Image src={rideauTop} alt="rideauLateralTop" className={`w-1/2 h-1/6 absolute z-10 right-0 ${openingTop && "transition-all duration-400 ease-in translate-y-[-100%]"}`} />
+                <Image src={rideauLat} alt="rideauLateralLeft" className={`w-1/2 h-full ${openingLat && "transition-all duration-1000 ease-in translate-x-[-100%]"}`} />
+                <Image src={rideauLat} alt="rideauLateralRight" className={`w-1/2 h-full ${openingLat && "transition-all duration-1000 ease-in translate-x-[100%]"}`}  />
             </div>
             {/* Sound */}
             <audio src="/sound/south_park_bus_stop.mp3" ref={spAudioTheme} />

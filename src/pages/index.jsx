@@ -6,6 +6,7 @@ import Presentation from "@/components/Presentation/Presentation";
 import Experiences from "@/components/Experiences/Experiences";
 import Footer from "@/components/Footer/Footer";
 import {Arsenal, Poppins} from "next/font/google"
+import Head from "next/head";
 
 const arsenal = Arsenal({
   subsets: ['latin'],
@@ -23,6 +24,9 @@ export default function Home() {
     <main
       className={`flex flex-col justify-center items-center w-full h-full ${arsenal.className}`}
     >
+      <Head>
+        <title>{"Lémuth's Portfolio"}</title>
+      </Head>
       {/* Bandeau */}
       <div className={`flex justify-between items-center w-full bg-yellowTheme`}>
         <div className={`flex-col w-[350px] ${poppins.className}`}>
@@ -32,7 +36,7 @@ export default function Home() {
         <div className="flex justify-center items-center">
           <div className="absolute right-[78px]">
             <p className="text-redTitle text-3xl">Développeur Front-End</p>
-            <p className={`text-end text-redTitle text-[8px] ${arsenal.className}`}>Mais un peu Full Stack aussi</p>
+            <p className={`text-end text-redTitle text-[8px] ${arsenal.className} hover: cursor-zoom-in hover:text-sm`}>Mais un peu Full Stack aussi</p>
           </div>
           <Image src={circleMazeTop} width={150} height={150} alt="circle-maze" />
         </div>
