@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 export default function Carousel(props){
 
-    const { slides, options } = props
+    const { slides, options, lg, tr } = props
     const [emblaRef, emblaApi] = useEmblaCarousel(options)
     
     const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
@@ -30,7 +30,7 @@ export default function Carousel(props){
                         return(
                             <div className="embla__slide" key={index}>
                                 <div>
-                                    <p>Mes Expériences</p>
+                                    <p>{tr("carousel_title", lg)}</p>
                                 </div>
                                 <div className="flex md:flex-row flex-col justify-between pb-6">
                                     <p className='md:text-4xl text-2xl font-semibold'>{value.intitule}</p>
@@ -44,10 +44,10 @@ export default function Carousel(props){
                                                 <p>{"Type"}</p>
                                             </div>
                                             <div className='flex w-full justify-between'>
-                                                <p>{value.duree}</p>
+                                                <p>{value[`duree_${lg}`]}</p>
                                                 <p>{"Durée"}</p>
                                             </div>
-                                            <p className='pt-6 font-s'>{value.prez}</p>
+                                            <p className='pt-6 font-s'>{value[`prez_${lg}`]}</p>
                                         </div>
                                         <div className='flex justify-center md:pt-6 pt-0 w-full'>
                                             {

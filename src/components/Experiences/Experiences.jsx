@@ -22,9 +22,11 @@ const experiencesData = [
         annee: 2017,
         periode:"2017",
         type: "Freelance",
-        duree: "1an",
+        duree_fr: "1an",
+        duree_en: "1year",
         intitule: "Léry-Pose en Normandie",
-        prez: "Application pour la base de loisirs nautique de Lery-Pose en Normandie. Application en direction des visiteurs du parc, utilisant la géo-localisation et mise en avant des activités du parc",
+        prez_fr: "Application pour la base de loisirs nautique de Léry-Poses en Normandie. Application destinée aux visiteurs du parc, utilisant la géolocalisation et mettant en avant les activités du parc",
+        prez_en: "Application for the Léry-Poses nautical leisure center in Normandy. An application aimed at park visitors, using geolocation and highlighting park activities",
         technos: [{name:'Javascript', level: '4'}, {name:'Leaflet', level: '3'}, {name:'Cordova', level: '2'}],
         images: [ lery1, lery2, lery3 ],
     },
@@ -32,9 +34,11 @@ const experiencesData = [
         annee: 2018,
         periode:"2018",
         type: "Employé",
-        duree: "6mois",
+        duree_fr: "6mois",
+        duree_en: "6months",
         intitule: "Magnolia.fr",
-        prez: "Mise en place du design de la v2 du CRM maison de la société Magnolia.fr",
+        prez_fr: "Mise en place du design de la version 2 du CRM interne de la société Magnolia.fr",
+        prez_en: "Implementation of the design for version 2 of Magnolia.fr's in-house CRM",
         technos: [{name:'Javascript', level: '2'}, {name:'Twig', level: '3'}, {name:'Php', level: '2'}, {name: 'Symfony', level: 3}],
         images: [magnolia],
     },
@@ -42,9 +46,11 @@ const experiencesData = [
         annee: 2019,
         periode:"2019",
         type: "Freelance",
-        duree: "1an",
+        duree_fr: "1an",
+        duree_en: "1year",
         intitule: "Shopping Winner",
-        prez: "Application de mise en relation entre commerçants locaux et clients. Maintenance et corrections avant lancement de la V1. Développement de fonctionnalités supplémentaires ( module de paiement, localisation GPS, etc...)",
+        prez_fr: "Application de mise en relation entre commerçants locaux et clients. Maintenance et corrections avant le lancement de la V1. Développement de fonctionnalités supplémentaires (module de paiement, localisation GPS, etc.)",
+        prez_en: "Application connecting local merchants with customers. Maintenance and bug fixes before the launch of V1. Development of additional features (payment module, GPS localization, etc.)",
         technos: [{name:'Javascript', level: '4'}, {name:'Angular', level: '3'}, {name: 'Sql', level: 3}],
         images: [shoppingW1, shoppingW2, shoppingW3],
     },
@@ -52,9 +58,11 @@ const experiencesData = [
         annee: 2020,
         periode:"2020",
         type: "Freelance",
-        duree: "1an",
+        duree_fr: "1an",
+        duree_en: "1year",
         intitule: "Tecnilud Manager",
-        prez: "Application de gestion d'interventions des techniciens de la société Tecnilud",
+        prez_fr: "Application de gestion des interventions des techniciens de la société Tecnilud",
+        prez_en: "Application for managing interventions by technicians at Tecnilud",
         technos: [{name:'React-Native', level: '3'}, {name:'ExpressJs', level: '2'}, {name: 'NodeJs', level: 2, color: "#5EAC46"}],
         images: [tecnilud1, tecnilud2, tecnilud3],
     },
@@ -62,9 +70,11 @@ const experiencesData = [
         annee: 2021,
         periode:"2021",
         type: "Freelance",
-        duree: "2mois",
+        duree_fr: "2mois",
+        duree_en: "2months",
         intitule: "Betech",
-        prez: "Petite application pour un bureau d'étude en électricité, permet l'échange d'informations en temps réel sur les détails d'un chantier pour optimiser la communication entre le bureau d'étude et les opérateurs sur le terrain",
+        prez_fr: "Petite application pour un bureau d'études en électricité, permettant l'échange d'informations en temps réel sur les détails d'un chantier pour optimiser la communication entre le bureau d'études et les opérateurs sur le terrain",
+        prez_en: "Small application for an electrical engineering office, enabling real-time exchange of information on project details to optimize communication between the office and field operators",
         technos: [{name:'React-Native', level: '3'}, {name:'Firebase', level: '2'}],
         images: [betech1, betech2],
     },
@@ -72,9 +82,11 @@ const experiencesData = [
         annee: 2022,
         periode:"2022-2023",
         type: "Freelance",
-        duree: "1an",
+        duree_fr: "1an",
+        duree_en: "1year",
         intitule: "Evalli",
-        prez: "Application (PWA) de coaching Sportif et bien-être. Réécriture de la V1, de Flutter à React, refonte complète de l'interface. Conception et intégration du design/UX. Ajouts de fonctionnalités",
+        prez_fr: "Application (PWA) de coaching sportif et bien-être. Réécriture de la V1, de Flutter à React, refonte complète de l'interface. Conception et intégration du design/UX. Ajout de fonctionnalités",
+        prez_en: "Sports and wellness coaching Progressive Web App (PWA). Rewriting of V1 from Flutter to React, complete redesign of the interface. Design and UX integration. Addition of features",
         technos: [{name:'NextJs', level: '3'}, {name:'React', level: '3'}, {name:'Redux', level: '2'}, {name: 'Tailwind', level: 3}],
         images: [evalli1, evalli2, evalli3]
     },
@@ -82,9 +94,11 @@ const experiencesData = [
         annee: 2023,
         periode:"2023",
         type: "Freelance",
-        duree: "3mois",
+        duree_fr: "3mois",
+        duree_en: "3months",
         intitule: "Peuch Configurator",
-        prez: "Création d'un Show-Room virtuel en 3D, qui permet la création personnalisée d'un habillage d'ascenseur parmi les options disponibles",
+        prez_fr: "Création d'un showroom virtuel en 3D permettant la personnalisation d'un habillage d'ascenseur parmi les options disponibles",
+        prez_en: "Creation of a 3D virtual showroom allowing customized elevator cladding selection from available options",
         technos: [{name:'NextJs', level: '3'}, {name:'React', level: '3'}, {name:'ThreeJs', level: '2'}, {name: '3DsMax', level:'3'}],
         link: "https://peuch-configurator-tgmlf.ondigitalocean.app/",
     },
@@ -92,23 +106,28 @@ const experiencesData = [
         annee: 2024,
         periode:"2024",
         type: "Freelance",
-        duree: "1mois",
+        duree_fr: "1mois",
+        duree_en: "1month",
         intitule: "Les Maîtres acousticiens",
-        prez: "Création d'un site web pour une société d'installation de matériel audio sur véhicule de luxe",
+        prez_fr: "Création d'un site web pour une société spécialisée dans l'installation de matériel audio sur véhicules de luxe",
+        prez_en: "Creation of a website for a company specializing in installing audio equipment in luxury vehicles",
         technos: [{name:'NextJs', level: '4'}, {name:'React', level: '4'}, {name:'Tailwind', level: '3'}],
         link: "https://www.les-maitres-acousticiens.fr/",
     },
 ]
 
-export default function Experiences(){
+export default function Experiences(props){
 
+    const { lg, tr } = props
     const options = { direction: 'rtl' }
 
     return (
-        <div className="md:w-[65%] w-full flex-col justify-center items-center p-6 md:mt-40 mt-5 shadow-xl relative">
-            <Carousel slides={experiencesData.sort((a,b) => {return b.annee - a.annee})} options={options} />
-            <div className="absolute left-[-20px] bottom-8 ease-in duration-100 transition transform hover:-translate-y-10 hover:translate-x-3">
-                <Image src={kenny} width={150} alt="kenny" />
+        <div className="flex flex-col justify-center items-center w-full relative">
+            <div className="md:w-[65%] w-full flex-col justify-center items-center p-6 md:mt-40 mt-5 shadow-xl relative">
+                <Carousel lg={lg} tr={tr} slides={experiencesData.sort((a,b) => {return b.annee - a.annee})} options={options} />
+                <div className="absolute left-[-20px] bottom-8 ease-in duration-100 transition transform hover:-translate-y-10 hover:translate-x-3">
+                    <Image src={kenny} width={150} alt="kenny" />
+                </div>
             </div>
         </div>
     )

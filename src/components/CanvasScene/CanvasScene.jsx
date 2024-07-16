@@ -25,6 +25,7 @@ import cssIcon from "@/assets/img/css_logo.png"
 import nodeIcon from "@/assets/img/node_logo.png"
 import snowballIcon from "@/assets/img/snowball.png"
 
+// fonts
 const arsenal = Arsenal({
     subsets: ['latin'],
     weight: '400'
@@ -36,84 +37,96 @@ const pannelData =[
         img: jsIcon,
         title: 'JavaScript',
         level: 4,
-        content: 'Javascript et le langage principal dans tous mes projets depuis que je code. J\'aime suivre ses nombreuses évolutions et adapter mon code en conséquences.',
+        content_fr: 'JavaScript est le langage principal dans tous mes projets depuis que je code. J\'aime suivre ses nombreuses évolutions et adapter mon code en conséquence.',
+        content_en: 'JavaScript has been the main language in all my projects since I started coding. I enjoy following its many evolutions and adapting my code accordingly.',
     },
     {
         id: 2,
         img: photoshopIcon,
         title: 'Photoshop',
         level: 3,
-        content: 'J\'utilisais Photoshop avant de savoir coder ! Détourage, modifications, format d\'images, je connais assez bien Photoshop pour me sentir libre dans mon travail.',
+        "content_fr": "J'utilisais Photoshop avant de savoir coder ! Détourage, modifications, formats d'images, je connais assez bien Photoshop pour me sentir libre dans mon travail.",
+        "content_en": "I used Photoshop before I knew how to code! Clipping, modifications, image formats, I know Photoshop well enough to feel free in my work.",
     },
     {
         id: 3,
         img: sqlIcon,
         title: 'SQL',
         level: 4,
-        content: 'Le Sql est un langage que j\'ai souvent utilisé dans ma pratique du développement-web.',
+        content_fr: "Le SQL est un langage que j'ai souvent utilisé dans ma pratique du développement web.",
+        content_en: "SQL is a language that I have often used in my web development practice.",
     },
     {
         id:4,
         img: mongoIcon,
         title: 'MongoDB',
         level: 3,
-        content: 'Je n\'ai travaillé que sur des projets perso avec MongoDB, mais son format javascript friendly me permet de l\'appréhender rapidement.',
+        content_fr: "Je n'ai travaillé que sur des projets personnels avec MongoDB, mais son format JavaScript-friendly me permet de l'appréhender rapidement.",
+        content_en: "I have only worked on personal projects with MongoDB, but its JavaScript-friendly format allows me to grasp it quickly.",
     },
     {
         id: 5,
         img: nextIcon,
         title: 'NextJs',
         level: 3,
-        content: 'Je travaille sur tous mes projets depuis deux ans avec NextJs. Il est vite devenu un incontournable pour moi.',
+        content_fr: "Je travaille sur tous mes projets depuis deux ans avec Next.js. Il est vite devenu un incontournable pour moi.",
+        content_en: "I have been working on all my projects with Next.js for the past two years. It quickly became essential for me.",
     },
     {
         id: 6,
         img: htmlIcon,
         title: 'Html',
         level: 4,
-        content: 'Je pratique le langage Html depuis le début de mon aventure de codeur. Je suis sûr que je n\'en connais pas toutes les subtilités, mais on se connait bien lui et Moi.'
+        content_fr: "Je pratique le langage HTML depuis le début de mon aventure de codeur. Je suis sûr que je n'en connais pas toutes les subtilités, mais on se connaît bien, lui et moi.",
+        content_en: "I have been using HTML since the beginning of my coding journey. I'm sure I don't know all its subtleties, but we know each other well.",
     },
     {
         id: 7,
         img: threeIcon,
         title: 'ThreeJs',
         level: 2,
-        content: 'J\'aime particulièrement la 3d puisque je modélise mes propres meshs et conçois mes textures, ThreeJs me permet de mettre mes compétences en 3D au service du web.',
+        content_fr: "J'aime particulièrement la 3D puisque je modélise mes propres meshes et conçois mes textures. Three.js me permet de mettre mes compétences en 3D au service du web.",
+        content_en: "I particularly love 3D as I model my own meshes and design my textures. Three.js allows me to bring my 3D skills to the web.",
     },
     {
         id: 8,
         img: typescriptIcon,
         title: 'TypeScript',
         level: 2,
-        content: 'J\'ai intégré Typescript dans mes derniers projets perso. Je ne suis pas encore familier avec, mais j\'en connais les Bases.',
+        content_fr: "J'ai intégré TypeScript dans mes derniers projets personnels. Je ne suis pas encore familier avec tous ses aspects, mais j'en connais les bases.",
+        content_en: "I have integrated TypeScript into my recent personal projects. I'm not yet familiar with all its aspects, but I know the basics.",
     },
     {
         id: 9,
         img: reactIcon,
         title: 'React',
         level: 4,
-        content: 'J\'intègre React dans tout mes projets depuis 4 ans, j\'ai l\'habitude de manipuler ses Hooks, et j\'aime également la library Redux.',
+        content_fr: "J'intègre React dans tous mes projets depuis 4 ans, j'ai l'habitude de manipuler ses Hooks, et j'apprécie également la bibliothèque Redux.",
+        content_en: "I have been using React in all my projects for the past 4 years, I'm used to working with its Hooks, and I also enjoy using the Redux library.",
     },
     {
         id: 10,
         img: tailwindIcon,
         title: 'Tailwind',
         level: 3,
-        content: 'Je travaille avec Tailwind dans tous mes projets depuis 2 ans.',
+        content_fr: "Je travaille avec Tailwind dans tous mes projets depuis 2 ans.",
+        content_en: "I have been working with Tailwind in all my projects for 2 years.",
     },
     {
         id: 11,
         img: cssIcon,
         title: 'CSS',
         level: 4,
-        content: 'Je pratique le css depuis le début de mon code, j\'ai une préférence pour les Flex-box',
+        content_fr: "Je pratique le CSS depuis mes débuts en programmation, j'ai une préférence pour les flexbox.",
+        content_en: "I have been practicing CSS since the beginning of my coding journey, and I have a preference for flexbox.",
     },
     {
         id: 12,
         img: nodeIcon,
         title: 'NodeJs',
         level: 3,
-        content: 'Je pratique les serveurs NodeJs depuis 5 ans. Je connais bien ExpressJs, Firebase, et ai un peu pratiqué récemment un contexte NestJs.',
+        content_fr: "Je pratique Node.js depuis 5 ans. Je connais bien Express.js, Firebase, et j'ai récemment exploré un peu Nest.js.",
+        content_en: "I have been working with Node.js for 5 years. I am familiar with Express.js, Firebase, and have recently dabbled a bit in Nest.js.",
     },
 ]
 
@@ -136,16 +149,17 @@ const SnowballsDisplay = ({count}) =>{
     </div>
 }
 
-export default function CanvasScene() {
+export default function CanvasScene(props) {
 
+    const { lg, tr }                                = props
     const [ leftPannelStatus, setLeftPannelStatus ] = useState(true)
     const [ openingLat, setOpeningLat ]             = useState(false)
     const [ openingTop, setOpeningTop ]             = useState(false)
     const [ isOpen, setIsOpen ]                     = useState(false)
     const [ activePannel, setActivePannel ]         = useState({isActive: false, id:null})
-    const orbitRef            = useRef()
-    const spAudioTheme        = useRef()
-    const stageCurtainAudio   = useRef()
+    const orbitRef                                  = useRef()
+    const spAudioTheme                              = useRef()
+    const stageCurtainAudio                         = useRef()
 
     function start(){
         setOpeningLat(true)
@@ -161,39 +175,39 @@ export default function CanvasScene() {
 
     return (
         <div className="flex min-h-0 min-w-0 w-full h-[350px] relative">   
-        <Canvas shadows camera= {{fov: 35, position:[-1.2844773379841994,1.4958643022203553e-15,24.39552610485493]}}>
-            <color attach={"background"} args={["#d8d8d8"]} />
-            <OrbitControls
-                makeDefault
-                minPolarAngle={0}
-                maxPolarAngle={Math.PI / 2}
-                target={[0, 0, 0]}
-                ref={orbitRef}
-            />
-            <rectAreaLight width={60} height={60} intensity={1} position={[-10, 10, 20]} />
-            <ambientLight intensity={0.5} />
-            <SPScene activePannel={activePannel} setActivePannel={setActivePannel} />
+            <Canvas shadows camera= {{fov: 35, position:[-1.2844773379841994,1.4958643022203553e-15,24.39552610485493]}}>
+                <color attach={"background"} args={["#d8d8d8"]} />
+                <OrbitControls
+                    makeDefault
+                    minPolarAngle={0}
+                    maxPolarAngle={Math.PI / 2}
+                    target={[0, 0, 0]}
+                    ref={orbitRef}
+                />
+                <rectAreaLight width={60} height={60} intensity={1} position={[-10, 10, 20]} />
+                <ambientLight intensity={0.5} />
+                <SPScene activePannel={activePannel} setActivePannel={setActivePannel} />
             </Canvas>
             {/* Helper Left pannel */}
             <div className={`flex items-center absolute top-2 left-2 ${arsenal.className} rounded-lg bg-black/45 backdrop-blur-md ${leftPannelStatus ? "transition-all duration-200 ease-in translate-x-0" : " transition-all duration-200  ease-out translate-x-[-95%]"} `}>
                 <div className={`flex-col p-4 border-r-2 border-yellowTheme text-white`}>
                     <div className="flex pb-2 justify-between items-center">
                         <Image src={leftMouse} width={35} alt="leftMouse" />
-                        <p className="pl-4">Rotation</p>
+                        <p className="pl-4">{tr("cs_hlp_rotate", lg)}</p>
                     </div>
                     <div className="flex pb-2 justify-between items-center">
                         <Image src={rightMouse} width={35} alt="rightMouse" />
-                        <p className="pl-4">Déplacement</p>
+                        <p className="pl-4">{tr("cs_hlp_move", lg)}</p>
                     </div>
                     <div className="flex pb-2 justify-between items-center">
                         <Image src={moletteMouse} width={35} alt="moletteMouse" />
-                        <p className="pl-4">Zoom</p>
+                        <p className="pl-4">{tr("cs_hlp_zoom", lg)}</p>
                     </div>
                     <button
                         className="flex w-full justify-center items-center bg-yellowTheme rounded-lg py-1 text-black  active:bg-yellow-500 shadow-md shadow-gray-800"
                         onClick={() => orbitRef.current.reset()}
                     >
-                        Reset camera
+                        {tr("cs_hlp_reset", lg)}
                         <Image className="ml-2" src={target} width={25} alt="target" />
                     </button>
                 </div>
@@ -214,6 +228,7 @@ export default function CanvasScene() {
                     activePannel.isActive &&
                         pannelData.map((data, key) => {
                             if(data.id === activePannel.id){
+                                let content = `content` + `_${lg}`
                                 return(
                                     <div
                                         key={key}
@@ -226,7 +241,7 @@ export default function CanvasScene() {
                                             </div>
                                             <div className="py-4 w-full flex-col">
                                                 <SnowballsDisplay count={data.level} />
-                                                <p className="max-w-64 pt-4">{data.content}</p>
+                                                <p className="max-w-64 pt-4">{data[`${content}`]}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -237,7 +252,7 @@ export default function CanvasScene() {
             </div>
             {/* Rideau */}
             <div className={`flex absolute w-full h-full ${isOpen ? 'hidden' : 'show'}`} onClick={() => start()}>
-                <button className={`px-8 py-4 bg-white text-gray-500 shadow-lg shadow-black ${arsenal.className} animate-pulse rounded-lg absolute top-[45%] left-[48%] z-20 ${openingLat && "hidden"}`}>Ouvrir</button>
+                <button className={`px-8 py-4 bg-white text-gray-500 shadow-lg shadow-black ${arsenal.className} animate-pulse rounded-lg absolute top-[45%] md:left-[48%] left-[35%] z-20 ${openingLat && "hidden"}`}>{tr("cs_curtain_btn", lg)}</button>
                 <Image src={rideauTop} alt="rideauLateralTop" className={`w-1/2 h-1/6 absolute z-10 ${openingTop && "transition-all duration-400 ease-in translate-y-[-100%]"}`} />
                 <Image src={rideauTop} alt="rideauLateralTop" className={`w-1/2 h-1/6 absolute z-10 right-0 ${openingTop && "transition-all duration-400 ease-in translate-y-[-100%]"}`} />
                 <Image src={rideauLat} alt="rideauLateralLeft" className={`w-1/2 h-full ${openingLat && "transition-all duration-1000 ease-in translate-x-[-100%]"}`} />
