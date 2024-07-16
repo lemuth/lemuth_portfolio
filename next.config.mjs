@@ -2,7 +2,7 @@
 const nextConfig = {
   basePath: "/lemuth_portfolio",
   output: "export",
-  reactStrictMode: true,
+  // reactStrictMode: true,
   // images: {
   //   loader: "akamai",
   //   path: "",
