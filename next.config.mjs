@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  distDir: 'dist',
   // basePath: "/lemuth_portfolio",
-  // output: "export",
   // reactStrictMode: true,
   // images: {
   //   loader: "akamai",

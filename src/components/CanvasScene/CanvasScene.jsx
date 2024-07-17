@@ -232,7 +232,7 @@ export default function CanvasScene(props) {
                                 return(
                                     <div
                                         key={key}
-                                        className={`flex items-center absolute top-1/4 right-2 ${arsenal.className} rounded-lg bg-black/45 backdrop-blur-md ${leftPannelStatus ? "transition-all duration-200 ease-in translate-x-0" : " transition-all duration-200  ease-out translate-x-[-95%]"} `}
+                                        className={`flex items-center absolute top-1/4 right-2 ${arsenal.className} rounded-lg bg-black/45 backdrop-blur-md `}
                                     >
                                         <div className={`flex-col p-4 text-white`}>
                                             <div className="flex pb-2 justify-between items-center border-b-2 border-white">
