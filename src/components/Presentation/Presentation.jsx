@@ -23,10 +23,10 @@ export default function Presentation(props){
                         className="rounded-full float-left m-4 shadow-md shadow-redTitle"
                     />
                     <div className="md:text-xl text-base">
-                        <p className="pb-2">{'Vous êtes à la recherche d\'un développeur front-end pour rejoindre votre équipe?'} </p>
-                        <p className="pb-2">{'Un développeur passionné par ce qu\'il fait et aimant relever des défis divers ? Je suis peut-être celui que vous recherchez.'} </p>
-                        <p className="pb-2">{'Pour me présenter rapidement, j\'ai eu plusieurs vies professionnelles et me suis passionné pour le code il y a 7/8 ans. Je me suis ensuite installé en freelance et ai développé principalement des applications pour des sociétés locales désireuses de mettre à jour leurs process internes. Je me suis toujours attaché à évoluer au fil du temps dans ma technologie de prédilection, le JavaScript.'} </p>
-                        <p>{'Lassé par le travail en solitaire, je souhaite aujourd\'hui rejoindre une équipe pour continuer à évoluer, partager mes connaissances et répondre aux besoins des clients, bien sûr ! Si mon profil correspond à ce que vous recherchez, n\'hésitez pas à me contacter et nous aurons le loisir d\'en discuter.'} </p>
+                        <p className="pb-2">{tr('prez_p_one', lg)}</p>
+                        <p className="pb-2">{tr('prez_p_two', lg)}</p>
+                        <p className="pb-2">{tr('prez_p_three', lg)}</p>
+                        <p>{tr('prez_p_four', lg)} </p>
                     </div>
                 </div>
                 {/* Rappel Contact */}
