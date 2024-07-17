@@ -6,7 +6,7 @@ import Presentation from "@/components/Presentation/Presentation";
 import Experiences from "@/components/Experiences/Experiences";
 import Footer from "@/components/Footer/Footer";
 import {tr} from "@/components/Translation/Translation"
-import {Arsenal, Poppins, Edu_VIC_WA_NT_Beginner} from "next/font/google"
+import {Arsenal, Edu_VIC_WA_NT_Beginner, Didact_Gothic} from "next/font/google"
 import Head from "next/head";
 import { useEffect, useState } from "react";
 
@@ -15,7 +15,7 @@ const arsenal = Arsenal({
   subsets: ['latin'],
   weight: '400'
 })
-const poppins = Poppins({
+const didactGhotic = Didact_Gothic({
   subsets: ['latin'],
   weight: '400'
 })
@@ -27,13 +27,6 @@ const beginner = Edu_VIC_WA_NT_Beginner({
 export default function Home() {
 
   const [ language, setLanguage ] = useState('fr')
-
-  //Detect navigator language
-  useEffect(() => {
-    var lang = navigator.language
-    console.log(lang)
-    lang === 'fr' ? setLanguage('fr') : setLanguage('en')
-  },[])
 
   // Change language Button
   const changeLanguage = () => {
@@ -52,7 +45,7 @@ export default function Home() {
         </div>
         {/* Bandeau */}
         <div className={`flex flex-col sm:flex-row justify-center sm:justify-between items-center w-full bg-yellowTheme`}>
-          <div className={`flex flex-row sm:flex-col w-full sm:w-[350px] ${poppins.className} justify-center sm:justify-center`}>
+          <div className={`flex flex-row sm:flex-col w-full sm:w-[350px] ${didactGhotic.className} justify-center sm:justify-center`}>
             <p className={`sm:w-full w-1/2 text-center uppercase font-bold text-5xl text-redTitle`}>gilles</p>
             <p className={`sm:w-full w-1/2 text-center sm:text-end font-bold text-6xl text-redTitle ${beginner.className}`}>Saley</p>
           </div>
