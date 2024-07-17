@@ -12,8 +12,6 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "paper1": `url(/img/paper1.png)`,
-        "paper2": `url(/img/paper2.png)`,
       },
       colors: {
         "redTitle": "#ff5757",
