@@ -31,6 +31,7 @@ export default function Home() {
   //Detect navigator language
   useEffect(() => {
     var lang = navigator.language
+    console.log(lang)
     lang === 'fr' ? setLanguage('fr') : setLanguage('en')
   },[])
 
