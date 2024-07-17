@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "export",
-  // distDir: 'dist',
+  output: "export",
+  distDir: 'dist',
 
-  // images: {
-  //   unoptimized: true
-  // }
+  images: {
+    unoptimized: true
+  }
 };
 
 export default nextConfig;
