@@ -38,7 +38,7 @@ export default function Footer(props) {
             <div className="flex-col w-full md:w-1/6 md:p-0 p-4 border-white">
                 <p className="text-white pb-4 text-center">{tr("ft_cv", lg)}</p>
                 <div className="flex w-full justify-center py-2">
-                    <Link href="../../assets/img/gilles_saley-cv 2024.pdf" target="_blank" rel="noopener noreferrer" className="hover:border-2 border-white rounded-full">
+                    <Link href="./pdf/gilles_saley-cv 2024.pdf" target="_blank" rel="noopener noreferrer" className="hover:border-2 border-white rounded-full">
                         <Image src={downloadIcon} width={45} alt="downloadIcon" />
                     </Link>
                 </div>
