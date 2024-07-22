@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react"
 import { Arsenal } from "next/font/google";
-import SPScene from "../spScene/spScene"
+import SPScene from "@/components/spScene/spScene"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls } from "@react-three/drei";
 import arrow from "@/assets/img/arrow.png"
@@ -240,9 +240,9 @@ export default function CanvasScene(props) {
                                                 <Image src={data.img} width={35} alt="leftMouse" />
                                                 <p>{data.title}</p>
                                             </div>
-                                            <div className="py-4 w-full flex-col">
-                                                <SnowballsDisplay count={data.level} />
-                                                <p className="max-w-64 pt-4">{data[`${content}`]}</p>
+                                            <div className="py-2 w-full flex-col">
+                                                {/* <SnowballsDisplay count={data.level} /> */}
+                                                <p className="max-w-64">{data[`${content}`]}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -280,9 +280,9 @@ export default function CanvasScene(props) {
                                             <Image src={data.img} width={35} alt="leftMouse" />
                                             <p>{data.title}</p>
                                         </div>
-                                        <div className="py-4 w-full flex-col">
-                                            <SnowballsDisplay count={data.level} />
-                                            <p className="max-w-64 pt-4 text-sm sm:text-base ">{data[`${content}`]}</p>
+                                        <div className="py-2 w-full flex-col">
+                                            {/* <SnowballsDisplay count={data.level} /> */}
+                                            <p className="max-w-64 text-sm sm:text-base ">{data[`${content}`]}</p>
                                         </div>
                                     </div>
                                 </div>

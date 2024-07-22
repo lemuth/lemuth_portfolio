@@ -44,10 +44,10 @@ export default function AutresInfo(props) {
                             <p className="py-1 px-0 sm:px-2">{tr("aa_p_two_four", lg)}</p>
                         </div>
                     </div>
-
                     <div className="transition transform hover:animate-bounce relative sm:absolute sm:left-[45%] bottom-[-40px] rotate-6 z-10">
                         <Image src={stano} width={150} alt="stano" />
                     </div>
+
                 </div>
             </div>
     )

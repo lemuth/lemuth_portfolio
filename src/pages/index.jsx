@@ -1,4 +1,8 @@
 import Image from "next/image";
+import Head from "next/head";
+import { useEffect, useState } from "react";
+import { getDatabase, onValue, ref, set, update } from "firebase/database";
+import { rtdb } from "@/lib/firebase/firebaseconfig";
 import circleMazeTop from "@/assets/img/circle-maze-top.png"
 import AutresInfo from "@/components/AutresInfo/AutresInfo";
 import CanvasScene from "@/components/CanvasScene/CanvasScene";
@@ -7,8 +11,6 @@ import Experiences from "@/components/Experiences/Experiences";
 import Footer from "@/components/Footer/Footer";
 import {tr} from "@/components/Translation/Translation"
 import {Arsenal, Edu_VIC_WA_NT_Beginner, Didact_Gothic} from "next/font/google"
-import Head from "next/head";
-import { useEffect, useState } from "react";
 
 // Fonts
 const arsenal = Arsenal({
@@ -27,11 +29,49 @@ const beginner = Edu_VIC_WA_NT_Beginner({
 export default function Home() {
 
   const [ language, setLanguage ] = useState('fr')
+  const [ count, setCount ]       = useState()
+  const database                  = rtdb;
+  // const ref                       = database.ref()
+
+  // ref.on('value', (snapshot) => {
+  //   console.log(snapshot.val());
+  // }, (errorObject) => {
+  //   console.log('The read failed: ' + errorObject.name);
+  // });
+
+  async function viewData() {
+    onValue(ref(rtdb), snapshot => {
+      if(snapshot.exists()){
+        const data = snapshot.val()
+        console.log('data :', data.visites.count )
+        setCount(data.visites.count)
+      } else {
+        console.log('__counter error')
+      }
+    })
+  }
+
 
   // Change language Button
   const changeLanguage = () => {
     setLanguage(language === 'fr' ? 'en' : 'fr')
   }
+
+  // useEffect(() => {
+  //   // TODO: get
+  //   // const actualCount = viewData()
+  //   // setCount(actualCount)
+  //   viewData().then(() => {
+  //     console.log("actualCount :", count )
+  //   })
+  //   // update(ref(rtdb, 'visites'), {count: 8 + 1})
+  // },[])
+
+  // useEffect(() => {
+  //   //TODO: send
+  //   console.log("coucou", count)
+  //   update(ref(rtdb, 'visites'), {count: count +1})
+  // },[count, setCount])
 
   return (
     <main>
@@ -52,7 +92,7 @@ export default function Home() {
           <div className="flex justify-center items-center">
             <div className="relative sm:absolute right-0 sm:right-[78px]">
               <p className="text-redTitle text-xl md:text-3xl">{tr("bandeau_title", language)}</p>
-              <p className={`text-end text-redTitle text-[8px] ${arsenal.className} hover: cursor-zoom-in hover:text-sm`}>{tr("bandeau_subtitle", language)}</p>
+              <p className={`text-end line leading-[14px] text-redTitle text-[8px] ${arsenal.className} hover:cursor-zoom-in hover:text-[14px]`}>{tr("bandeau_subtitle", language)}</p>
             </div>
           </div>
           {/* Image circleMaze */}

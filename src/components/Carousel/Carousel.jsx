@@ -6,6 +6,7 @@ import {
 } from './CarouselArrowButton'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Carousel(props){
 
@@ -29,24 +30,24 @@ export default function Carousel(props){
                     {slides.map((value, index) => {
                         return(
                             <div className="embla__slide" key={index}>
-                                <div>
+                                {/* <div>
                                     <p>{tr("carousel_title", lg)}</p>
-                                </div>
+                                </div> */}
                                 <div className="flex md:flex-row flex-col justify-between pb-6">
                                     <p className='md:text-4xl text-2xl font-semibold'>{value.intitule}</p>
-                                    <p className='md:text-5xl text-3xl text-redTitle'>{value.periode}</p>
+                                    {/* <p className='md:text-5xl text-3xl text-redTitle'>{value.periode}</p> */}
                                 </div>
                                 <div className='flex md:flex-row flex-col w-[100%] h-full'>
                                     <div className='flex-col md:w-1/3 w-full p-4 ml-4'>
-                                        <div className='shadow-lg p-4'>
+                                        <div className='p-4'>
                                             <div className='flex w-full justify-between'>
                                                 <p className='font-semibold'>{value.type}</p>
                                                 <p>{"Type"}</p>
                                             </div>
-                                            <div className='flex w-full justify-between'>
+                                            {/* <div className='flex w-full justify-between'>
                                                 <p>{value[`duree_${lg}`]}</p>
                                                 <p>{"Durée"}</p>
-                                            </div>
+                                            </div> */}
                                             <p className='pt-6 font-s'>{value[`prez_${lg}`]}</p>
                                         </div>
                                         <div className='flex justify-center md:pt-6 pt-0 w-full'>
@@ -54,29 +55,55 @@ export default function Carousel(props){
                                                 value.technos.map((item, key2) => {
                                                     return(
                                                         <div key={key2} className='flex-col justify-center mr-2 items-center px-0 md:px-2 w-14'>
-                                                            <p className='text-sm text-center font-light md:font-semibold w-full pb-2'>{item.name}</p>
-                                                            <div className={`bg-redTitle rounded-br-xl w-6 md:w-10 px-4 rounded-bl-xl ${item.level === '3' ? "h-16" : item.level === "4" ? "h-24" : "h-10"} shadow-md shadow-gray-400`} />
+                                                            <p className='text-sm text-center font-semibold w-full pb-2'>{item.name}</p>
+                                                            <div className={`bg-redTitle rounded-br-xl w-full px-4 rounded-bl-xl ${item.level === '3' ? "h-16" : item.level === "4" ? "h-24" : "h-10"} shadow-md shadow-gray-400`} />
                                                         </div>
                                                     )
                                                 })
                                             }
                                         </div>
                                     </div>
-                                    <div className='flex md:w-2/3 w-full justify-center'>
+                                    <div className='flex-col'>
                                         {
                                             value.images &&
-                                            value.images.map((img, key) =>{
-                                                return(
-                                                    <div  key={key}>
-                                                        <Image src={img} width={200} height={374} alt={img} />
-                                                    </div>
-                                                )
-                                            } )
+                                            <div className='flex'>
+                                                {
+                                                    value.images.map((img, key) =>{
+                                                        if(value.images.length === 3){
+                                                            return(
+                                                                <div  key={key}>
+                                                                    <Image src={img} width={200} height={374} alt={img} />
+                                                                </div>
+                                                            )
+                                                        }
+                                                        if(value.images.length === 2){
+                                                            return(
+                                                                <div  key={key}>
+                                                                    <Image src={img} width={300} height={374} alt={img} />
+                                                                </div>
+                                                            )
+                                                        }
+                                                        if(value.images.length === 1){
+                                                            return(
+                                                                <div  key={key}>
+                                                                    <Image src={img} width={400} height={374} alt={img} />
+                                                                </div>
+                                                            )
+                                                        }
+                                                    } )
+                                                }
+                                            </div>
                                         }
                                         {
                                             value.link &&
-                                            <div className='flex w-full h-full shadow-md'>
-                                                <iframe src={value.link} className='w-full h-full' />
+                                            <div className='flex w-full pt-6'>
+                                                <Link
+                                                href={value.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className='w-full text-center text-xl border-2 border-redTitle border-opacity-0 hover:border-opacity-100 rounded-xl bg-redTitle/75'
+                                            >
+                                                {tr("carousel_link", lg)}</Link>
                                             </div>
                                         }
                                     </div>
@@ -92,7 +119,7 @@ export default function Carousel(props){
                     <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
                     <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
                 </div>
-                <div className="embla__dots z-10">
+                <div className="embla__dots z-10 hidden md:flex">
                     {scrollSnaps.map((_, index) => (
                         <DotButton
                             key={index}
