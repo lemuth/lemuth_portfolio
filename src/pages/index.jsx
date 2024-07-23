@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { getDatabase, onValue, ref, set, update } from "firebase/database";
+import { getDatabase, onValue, ref, set, get, child, update } from "firebase/database";
 import { rtdb } from "@/lib/firebase/firebaseconfig";
 import circleMazeTop from "@/assets/img/circle-maze-top.png"
 import AutresInfo from "@/components/AutresInfo/AutresInfo";
@@ -30,48 +30,28 @@ export default function Home() {
 
   const [ language, setLanguage ] = useState('fr')
   const [ count, setCount ]       = useState()
-  const database                  = rtdb;
-  // const ref                       = database.ref()
 
-  // ref.on('value', (snapshot) => {
-  //   console.log(snapshot.val());
-  // }, (errorObject) => {
-  //   console.log('The read failed: ' + errorObject.name);
-  // });
+  const dbRef = ref(getDatabase());
 
-  async function viewData() {
-    onValue(ref(rtdb), snapshot => {
-      if(snapshot.exists()){
-        const data = snapshot.val()
-        console.log('data :', data.visites.count )
-        setCount(data.visites.count)
+  useEffect(() => {
+    get(child(dbRef, `visites`)).then((snapshot) => {
+      if (snapshot.exists()) {
+        const value = snapshot.val().count;
+        update(ref(rtdb, 'visites'), {count: value +1})
+        console.log(value)
       } else {
-        console.log('__counter error')
+        console.log("No data available");
       }
-    })
-  }
+    }).catch((error) => {
+      console.error(error);
+    });
+  },[])
 
 
   // Change language Button
   const changeLanguage = () => {
     setLanguage(language === 'fr' ? 'en' : 'fr')
   }
-
-  // useEffect(() => {
-  //   // TODO: get
-  //   // const actualCount = viewData()
-  //   // setCount(actualCount)
-  //   viewData().then(() => {
-  //     console.log("actualCount :", count )
-  //   })
-  //   // update(ref(rtdb, 'visites'), {count: 8 + 1})
-  // },[])
-
-  // useEffect(() => {
-  //   //TODO: send
-  //   console.log("coucou", count)
-  //   update(ref(rtdb, 'visites'), {count: count +1})
-  // },[count, setCount])
 
   return (
     <main>
