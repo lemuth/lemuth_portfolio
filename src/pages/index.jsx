@@ -29,7 +29,6 @@ const beginner = Edu_VIC_WA_NT_Beginner({
 export default function Home() {
 
   const [ language, setLanguage ] = useState('fr')
-  const [ count, setCount ]       = useState()
 
   const dbRef = ref(getDatabase());
 
