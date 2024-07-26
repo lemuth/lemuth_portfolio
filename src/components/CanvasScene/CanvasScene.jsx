@@ -130,25 +130,6 @@ const pannelData =[
     },
 ]
 
-const SnowballsDisplay = ({count}) =>{
-    return <div className="flex justify-center items-center">
-        {
-            Array.from({ length: count }, (e, i) => {
-                return(
-                    <Image
-                        key={i}
-                        src={snowballIcon}
-                        width={15}
-                        height={15}
-                        alt={`snowball + ${e}`}
-                    />
-                )
-            })
-        }
-        <p>/5</p>
-    </div>
-}
-
 export default function CanvasScene(props) {
 
     const { lg, tr }                                = props
@@ -241,7 +222,6 @@ export default function CanvasScene(props) {
                                                 <p>{data.title}</p>
                                             </div>
                                             <div className="py-2 w-full flex-col">
-                                                {/* <SnowballsDisplay count={data.level} /> */}
                                                 <p className="max-w-64">{data[`${content}`]}</p>
                                             </div>
                                         </div>
@@ -281,7 +261,6 @@ export default function CanvasScene(props) {
                                             <p>{data.title}</p>
                                         </div>
                                         <div className="py-2 w-full flex-col">
-                                            {/* <SnowballsDisplay count={data.level} /> */}
                                             <p className="max-w-64 text-sm sm:text-base ">{data[`${content}`]}</p>
                                         </div>
                                     </div>

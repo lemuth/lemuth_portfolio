@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { getDatabase, onValue, ref, set, get, child, update } from "firebase/database";
+import { getDatabase, ref, get, child, update } from "firebase/database";
 import { rtdb } from "@/lib/firebase/firebaseconfig";
 import circleMazeTop from "@/assets/img/circle-maze-top.png"
 import AutresInfo from "@/components/AutresInfo/AutresInfo";
@@ -55,9 +55,10 @@ export default function Home() {
   return (
     <main>
       <Head>
-        <title>{"Lémuth's Portfolio"}</title>
+        <title>{"Gilles Saley développeur Front-end"}</title>
+        <meta name="description" content="Gilles Saley développeur Front-end, actuellement disponible et en recherche d'une équipe à rejoindre." />
       </Head>
-      <div className={`flex-col justify-center items-center w-screen max-w-full ${arsenal.className} bg-white`}>
+      <div className={`flex-col justify-center items-center w-screen max-w-full ${arsenal.className} bg-gray-100`}>
         {/* Module de langues */}
         <div className= {`flex justify-center bg-yellowTheme text-redTitle font-normal`}>
           <button onClick={() => {changeLanguage()}} className="hover:scale-125">{tr('lg_button', language)}</button>

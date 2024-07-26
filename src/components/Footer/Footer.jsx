@@ -4,7 +4,6 @@ import downloadIcon from "@/assets/img/downloadIcon.png"
 import circleMazeBt from '@/assets/img/circle-maze-bottom.png'
 import gitHubIcon from '@/assets/img/GitHub-logo.png'
 import Link from "next/link"
-// import cvPdf from '@/assets/img/gilles_saley-cv 2024.pdf'
 
 export default function Footer(props) {
 
@@ -38,9 +37,16 @@ export default function Footer(props) {
             <div className="flex-col w-full md:w-1/6 md:p-0 p-4 border-white">
                 <p className="text-white pb-4 text-center">{tr("ft_cv", lg)}</p>
                 <div className="flex w-full justify-center py-2">
-                    <Link href="./pdf/gilles_saley-cv 2024.pdf" target="_blank" rel="noopener noreferrer" className="border-2 border-opacity-0 hover:border-opacity-100 border-white rounded-full">
-                        <Image src={downloadIcon} width={45} alt="downloadIcon" />
-                    </Link>
+                    {
+                        lg === 'fr' ?
+                            <Link href="./pdf/gilles_saley-cv 2024.pdf" target="_blank" rel="noopener noreferrer" className="border-2 border-opacity-0 hover:border-opacity-100 border-white rounded-full">
+                                <Image src={downloadIcon} width={45} alt="downloadIcon" />
+                            </Link>
+                        :
+                            <Link href="./pdf/gilles_saley-cv 2024-en.pdf" target="_blank" rel="noopener noreferrer" className="border-2 border-opacity-0 hover:border-opacity-100 border-white rounded-full">
+                                <Image src={downloadIcon} width={45} alt="downloadIcon" />
+                            </Link>
+                    }
                 </div>
             </div>
         </div>
