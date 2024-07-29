@@ -58,7 +58,7 @@ export default function Home() {
         <title>{"Gilles Saley développeur Front-end"}</title>
         <meta name="description" content="Gilles Saley développeur Front-end, actuellement disponible et en recherche d'une équipe à rejoindre." />
       </Head>
-      <div className={`flex-col justify-center items-center w-screen max-w-full ${arsenal.className} bg-gray-100`}>
+      <div className={`flex-col justify-center items-center w-screen max-w-full ${arsenal.className} bg-gray-100 text-black`}>
         {/* Module de langues */}
         <div className= {`flex justify-center bg-yellowTheme text-redTitle font-normal`}>
           <button onClick={() => {changeLanguage()}} className="hover:scale-125">{tr('lg_button', language)}</button>
