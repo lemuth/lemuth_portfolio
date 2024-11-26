@@ -8,6 +8,7 @@ import AutresInfo from "@/components/AutresInfo/AutresInfo";
 import CanvasScene from "@/components/CanvasScene/CanvasScene";
 import Presentation from "@/components/Presentation/Presentation";
 import Experiences from "@/components/Experiences/Experiences";
+import Bonus3d from "@/components/Bonus3d/Bonus3d";
 import Footer from "@/components/Footer/Footer";
 import {tr} from "@/components/Translation/Translation"
 import {Arsenal, Edu_VIC_WA_NT_Beginner, Didact_Gothic} from "next/font/google"
@@ -82,6 +83,7 @@ export default function Home() {
         <Presentation lg={language} tr={tr} />
         <Experiences lg={language} tr={tr} />
         <AutresInfo lg={language} tr={tr} />
+        <Bonus3d  lg={language} tr={tr} />
         <Footer lg={language} tr={tr} />
       </div>
     </main>

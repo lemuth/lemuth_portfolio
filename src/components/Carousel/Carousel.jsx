@@ -30,12 +30,8 @@ export default function Carousel(props){
                     {slides.map((value, index) => {
                         return(
                             <div className="embla__slide" key={index}>
-                                {/* <div>
-                                    <p>{tr("carousel_title", lg)}</p>
-                                </div> */}
                                 <div className="flex md:flex-row flex-col justify-between pb-6">
                                     <p className='md:text-4xl text-2xl font-semibold'>{value.intitule}</p>
-                                    {/* <p className='md:text-5xl text-3xl text-redTitle'>{value.periode}</p> */}
                                 </div>
                                 <div className='flex md:flex-row flex-col w-[100%] h-full'>
                                     <div className='flex-col md:w-1/3 w-full p-4 ml-4'>
@@ -44,10 +40,6 @@ export default function Carousel(props){
                                                 <p className='font-semibold'>{value.type}</p>
                                                 <p>{"Type"}</p>
                                             </div>
-                                            {/* <div className='flex w-full justify-between'>
-                                                <p>{value[`duree_${lg}`]}</p>
-                                                <p>{"Durée"}</p>
-                                            </div> */}
                                             <p className='pt-6 font-s'>{value[`prez_${lg}`]}</p>
                                         </div>
                                         <div className='flex justify-center md:pt-6 pt-0 w-full'>
