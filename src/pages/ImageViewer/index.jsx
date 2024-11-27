@@ -102,7 +102,7 @@ export default function ImageViewerPage(){
                                     className="object-contain w-full h-full"
                                 >
                                     <source
-                                        src="/images/CM-cerveau vid.mp4"
+                                        src={currentImage.path}
                                         type="video/mp4"
                                     />
                                 </video>
@@ -128,7 +128,7 @@ export default function ImageViewerPage(){
                                         className="object-contain w-full h-full"
                                     >
                                         <source
-                                            src="/images/CM-cerveau vid.mp4"
+                                            src={currentImage.path}
                                             type="video/mp4"
                                         />
                                     </video>
