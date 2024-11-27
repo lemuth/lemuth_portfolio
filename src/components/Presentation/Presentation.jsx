@@ -12,7 +12,7 @@ export default function Presentation(props){
         <div className="flex flex-col justify-center items-center w-full relative">
             <div className="flex flex-col justify-center w-full md:w-[65%] p-4 md:p-16 mt-20 pb-20 md:pb-32 shadow-xl mb-32 md:mb-0 pt-0 md:pt-32">
                 {/* Block title */}
-                <div className="w-full pb-4 text-4xl text-redTitle font-semibold">{tr("prez_title", props.lg)}</div>
+                <h2 className="w-full pb-4 text-4xl text-redTitle font-semibold">{tr("prez_title", props.lg)}</h2>
                 {/* Block content */}
                 <div className="w-full">
                     <Image

@@ -38,7 +38,6 @@ export default function Home() {
       if (snapshot.exists()) {
         const value = snapshot.val().count;
         update(ref(rtdb, 'visites'), {count: value +1})
-        console.log(value)
       } else {
         console.log("No data available");
       }
@@ -56,8 +55,12 @@ export default function Home() {
   return (
     <main>
       <Head>
-        <title>{"Gilles Saley développeur Front-end"}</title>
-        <meta name="description" content="Gilles Saley développeur Front-end, actuellement disponible et en recherche d'une équipe à rejoindre." />
+        <title>{"Gilles Saley développeur Front-end React"}</title>
+        <meta name="description" content="Découvrez mon portfolio : projets, expériences, et compétences." />
+        <meta property="og:title" content="Gilles Saley - Portfolio" />
+        <meta property="og:description" content="Découvrez mon portfolio : projets, expériences, et compétences." />
+        <meta property="og:url" content="https://lemuth.github.io/lemuth_portfolio/" />
+        <meta property="og:type" content="website" />
       </Head>
       <div className={`flex-col justify-center items-center w-screen max-w-full ${arsenal.className} bg-gray-100 text-black`}>
         {/* Module de langues */}
@@ -72,7 +75,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center">
             <div className="relative sm:absolute right-0 sm:right-[78px]">
-              <p className="text-redTitle text-xl md:text-3xl">{tr("bandeau_title", language)}</p>
+              <h1 className="text-redTitle text-xl md:text-3xl">{tr("bandeau_title", language)}</h1>
               <p className={`text-end line leading-[14px] text-redTitle text-[8px] ${arsenal.className} hover:cursor-zoom-in hover:text-[14px]`}>{tr("bandeau_subtitle", language)}</p>
             </div>
           </div>

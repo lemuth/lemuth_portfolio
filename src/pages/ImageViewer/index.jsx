@@ -14,14 +14,14 @@ const beginner = Edu_VIC_WA_NT_Beginner({
 export default function ImageViewerPage(){
 
     const pictureListe = [
-        {id:0, type: "img", path: "/lemuth_portfolio/images/TP-street_project.jpg", width: 2048, height: 1556, title: "Cyber Street", prez: ""},
-        {id:1, type: "img", path: "/lemuth_portfolio/images/TeakCell-vue-interieur-final.jpg", width: 2048, height: 1536, title: "Bungalow Intérieur", prez: ""},
-        {id:2, type: "img", path: "/lemuth_portfolio/images/TeakCell-vue exterieur-final.jpg", width: 2048, height: 1536, title: "Bungalow Extérieur", prez: ""},
-        {id:3, type: "img", path: "/lemuth_portfolio/images/MTF-filaire.jpg", width: 2880, height: 2160, title: "Mécha Filaire", prez: ""},
-        {id:4, type: "img", path: "/lemuth_portfolio/images/TP-street_in_fire.jpg", width: 1280, height: 960, title: "Last Night in VDR", prez: ""},
-        {id:5, type: "img", path: "/lemuth_portfolio/images/CM-moonoeuf-02.jpg", width: 3508, height: 2480, title: "CM-MoonOeuf", prez: ""},
-        {id:6, type: "img", path: "/lemuth_portfolio/images/CM-vestiaire-01.jpg", width: 2956, height: 1672, title: "CM-vestiaire", prez: ""},
-        {id:7, type: "img", path: "/lemuth_portfolio/images/CM-bureau-02.jpg", width: 1280, height: 723, title: "CM-Bureau", prez: ""},
+        {id:0, type: "img", path: "/lemuth_portfolio/images/TP-street_project.jpg", width: 2048, height: 1556, title: "Cyber Street", prez: "ruelle inspiration cyberpunk"},
+        {id:1, type: "img", path: "/lemuth_portfolio/images/TeakCell-vue-interieur-final.jpg", width: 2048, height: 1536, title: "Bungalow Intérieur", prez: "bungalow pour la société teakCell vue interieur"},
+        {id:2, type: "img", path: "/lemuth_portfolio/images/TeakCell-vue exterieur-final.jpg", width: 2048, height: 1536, title: "Bungalow Extérieur", prez: "bungalow pour la société teakCell vue exterieur"},
+        {id:3, type: "img", path: "/lemuth_portfolio/images/MTF-filaire.jpg", width: 2880, height: 2160, title: "Mécha Filaire", prez: "mecha vue graphique"},
+        {id:4, type: "img", path: "/lemuth_portfolio/images/TP-street_in_fire.jpg", width: 1280, height: 960, title: "Last Night in VDR", prez: "projet de map pour le jeu leftfordead"},
+        {id:5, type: "img", path: "/lemuth_portfolio/images/CM-moonoeuf-02.jpg", width: 3508, height: 2480, title: "CM-MoonOeuf", prez: "création pour le film croquemeurtre MoonOeuf"},
+        {id:6, type: "img", path: "/lemuth_portfolio/images/CM-vestiaire-01.jpg", width: 2956, height: 1672, title: "CM-vestiaire", prez: "création pour le film croquemeurtre vestiaire"},
+        {id:7, type: "img", path: "/lemuth_portfolio/images/CM-bureau-02.jpg", width: 1280, height: 723, title: "CM-Bureau", prez: "création pour le film croquemeurtre bureau"},
         {id:8, type: "vid", path: "/lemuth_portfolio/images/CM-cerveau vid.mp4", width: 1280, height: 723, title: "Fauteuil des réflexions", prez: ""},
     ]
     const router = useRouter()
@@ -90,7 +90,7 @@ export default function ImageViewerPage(){
                             currentImage.type === "img" ?
                                 <Image
                                     src={currentImage.path}
-                                    alt={currentImage.id}
+                                    alt={currentImage.prez}
                                     width={currentImage.width}
                                     height={currentImage.height}
                                     className="object-contain w-full h-full"
@@ -116,7 +116,7 @@ export default function ImageViewerPage(){
                                 newImage.type === "img" ?
                                     <Image
                                         src={newImage.path}
-                                        alt={newImage.id}
+                                        alt={newImage.prez}
                                         width={newImage.width}
                                         height={newImage.height}
                                         className="object-contain w-full h-full"
