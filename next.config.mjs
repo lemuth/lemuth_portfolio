@@ -2,6 +2,7 @@
 const nextConfig = {
   output: "export",
   distDir: 'dist',
+  basePath: '/lemuth_portfolio',
 
   images: {
     unoptimized: true
