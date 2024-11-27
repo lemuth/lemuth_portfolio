@@ -23,7 +23,6 @@ import reactIcon from "@/assets/img/react-logo.png"
 import tailwindIcon from "@/assets/img/tailwind_logo.png"
 import cssIcon from "@/assets/img/css_logo.png"
 import nodeIcon from "@/assets/img/node_logo.png"
-import snowballIcon from "@/assets/img/snowball.png"
 
 // fonts
 const arsenal = Arsenal({
@@ -240,8 +239,8 @@ export default function CanvasScene(props) {
                     <Image src={rideauLat} alt="rideauLateralRight" className={`w-1/2 h-full ${openingLat && "transition-all duration-1000 ease-in translate-x-[100%]"}`}  />
                 </div>
                 {/* Sound */}
-                <audio src="./sound/south_park_bus_stop.mp3" ref={spAudioTheme} />
-                <audio src="./sound/open_stage_curtain.mp3" ref={stageCurtainAudio} />
+                <audio src="./lemuth_portfolio/sound/south_park_bus_stop.mp3" ref={spAudioTheme} />
+                <audio src="./lemuth_portfolio/sound/open_stage_curtain.mp3" ref={stageCurtainAudio} />
             </div>
             {/* Helper Bottom pannel */}
             <div>
