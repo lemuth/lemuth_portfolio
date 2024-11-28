@@ -239,8 +239,8 @@ export default function CanvasScene(props) {
                     <Image src={rideauLat} alt="rideauLateralRight" className={`w-1/2 h-full ${openingLat && "transition-all duration-1000 ease-in translate-x-[100%]"}`}  />
                 </div>
                 {/* Sound */}
-                <audio src="./lemuth_portfolio/sound/south_park_bus_stop.mp3" ref={spAudioTheme} />
-                <audio src="./lemuth_portfolio/sound/open_stage_curtain.mp3" ref={stageCurtainAudio} />
+                <audio src="/lemuth_portfolio/sound/south_park_bus_stop.mp3" ref={spAudioTheme} />
+                <audio src="/lemuth_portfolio/sound/open_stage_curtain.mp3" ref={stageCurtainAudio} />
             </div>
             {/* Helper Bottom pannel */}
             <div>
