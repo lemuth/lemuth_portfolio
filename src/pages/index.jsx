@@ -8,6 +8,7 @@ import AutresInfo from "@/components/AutresInfo/AutresInfo";
 import CanvasScene from "@/components/CanvasScene/CanvasScene";
 import Presentation from "@/components/Presentation/Presentation";
 import Experiences from "@/components/Experiences/Experiences";
+import ProjetsPerso from "@/components/ProjetsPerso/ProjetsPerso";
 import Bonus3d from "@/components/Bonus3d/Bonus3d";
 import Footer from "@/components/Footer/Footer";
 import {tr} from "@/components/Translation/Translation"
@@ -85,6 +86,7 @@ export default function Home() {
         <CanvasScene lg={language} tr={tr} />
         <Presentation lg={language} tr={tr} />
         <Experiences lg={language} tr={tr} />
+        <ProjetsPerso lg={language} tr={tr} />
         <AutresInfo lg={language} tr={tr} />
         <Bonus3d  lg={language} tr={tr} />
         <Footer lg={language} tr={tr} />

@@ -23,10 +23,10 @@ export default function Footer(props) {
             {/* liens mail */}
             <div className="flex-col md:w-1/2 w-full md:p-0 p-4  md:border-r-2 border-r-0 border-b-2 md:border-b-0 md:border-l-2 border-l-0 border-t-2 md:border-t-0 border-white">
                 <p className="text-white w-full text-center pb-4">{tr("ft_mail", lg)}</p>
-                <div className="flex w-full justify-center items-center py-2 border-2 border-opacity-0 hover:border-opacity-100 border-white rounded-lg">
+                <div className="flex justify-center items-center py-2 rounded-lg">
                     <Image src={mailIcon} width={25} height={25} alt="phoneIcon" className="bg-white rounded-md" />
                     <a
-                        className="text-white pl-6 text-center"
+                        className="text-white pl-6"
                         href="mailto:gilles.saley@gmail.com"
                     >
                         {"gilles.saley@gmail.com"}
