@@ -2,6 +2,13 @@ import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 import kyle from "@/assets/img/kyle.png"
 import double_arrow from "@/assets/img/double_arrow.png"
+import { Edu_VIC_WA_NT_Beginner } from "next/font/google"
+
+const beginner = Edu_VIC_WA_NT_Beginner({
+    subsets: ['latin'],
+    weight: '400'
+})
+
 
 export default function ProjetsPerso(props){
 
@@ -58,7 +65,7 @@ export default function ProjetsPerso(props){
                                 className={`${needDropdownTool ? `bg-yellowTheme w-full text-center py-2 rounded-lg flex justify-center items-center hover:cursor-pointer select-none` : "self-start" }`}
                                 onClick={() => {needDropdownTool && activDropDown("sofa")}}
                             >
-                                <h2 className="pb-2 font-semibold mx-auto pl-10">{tr('pp_four_title', lg)}</h2>
+                                <h2 className={`pb-2 text-2xl ${!needDropdownTool && "underline"}  mx-auto pl-10 ${beginner.className}`}>{tr('pp_four_title', lg)}</h2>
                                 {
                                     needDropdownTool &&
                                     <div className="self-center ml-auto">
@@ -99,7 +106,7 @@ export default function ProjetsPerso(props){
                                 className={`${needDropdownTool ? `bg-yellowTheme w-full text-center py-2 rounded-lg flex justify-between items-center hover:cursor-pointer select-none` : "self-start" }`}
                                 onClick={() => {needDropdownTool && activDropDown("gibiti")}}
                             >
-                                <h2 className="pb-2 font-semibold pl-10 mx-auto">{tr('pp_two_title', lg)}</h2>
+                                <h2 className={`pb-2 text-2xl ${!needDropdownTool && "underline"}  mx-auto pl-10 ${beginner.className}`}>{tr('pp_two_title', lg)}</h2>
                                 {
                                     needDropdownTool &&
                                     <div className="self-center ml-auto">
@@ -132,7 +139,7 @@ export default function ProjetsPerso(props){
                                 className={`${needDropdownTool ? `bg-yellowTheme w-full text-center py-2 rounded-lg flex justify-between items-center hover:cursor-pointer select-none` : "self-start" }`}
                                 onClick={() => {needDropdownTool && activDropDown("converter")}}
                             >
-                                <h2 className="pb-2 font-semibold pl-10 mx-auto">{tr('pp_one_title', lg)}</h2>
+                                <h2 className={`pb-2 text-2xl ${!needDropdownTool && "underline"}  mx-auto pl-10 ${beginner.className}`}>{tr('pp_one_title', lg)}</h2>
                                 {
                                     needDropdownTool &&
                                     <div className="self-center ml-auto">
@@ -164,7 +171,7 @@ export default function ProjetsPerso(props){
                                 className={`${needDropdownTool ? `bg-yellowTheme w-full text-center py-2 rounded-lg flex justify-between items-center hover:cursor-pointer select-none` : "self-start" }`}
                                 onClick={() => {needDropdownTool && activDropDown("unity")}}
                             >
-                                <h2 className="pb-2 font-semibold pl-10 mx-auto">{tr('pp_three_title', lg)}</h2>
+                                <h2 className={`pb-2 text-2xl ${!needDropdownTool && "underline"} mx-auto pl-10 ${beginner.className}`}>{tr('pp_three_title', lg)}</h2>
                                 {
                                     needDropdownTool &&
                                     <div className="self-center ml-auto">
