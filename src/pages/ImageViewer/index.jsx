@@ -1,11 +1,12 @@
 import Image from "next/image"
 import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import changeIcon from "@/assets/img/nextPict.png"
 import closeIcon from "@/assets/img/close.png"
 import Link from "next/link"
 import { Edu_VIC_WA_NT_Beginner } from "next/font/google"
 import { pictureListe } from "@/components/Data/Data"
+import { useOrientation } from "@/hooks/useOrientation"
 
 const beginner = Edu_VIC_WA_NT_Beginner({
     subsets: ['latin'],
@@ -19,21 +20,7 @@ export default function ImageViewerPage(){
     const [ currentImage , setCurrentImage ] = useState(() => pictureListe[Number(id) || 0])
     const [ newImage , setNewImage ] = useState(null)
     const [isFading, setIsFading] = useState(false)
-    const [orientation, setOrientation] = useState("portrait");
-
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            const mediaQuery = window.matchMedia("(orientation: portrait)");
-            const updateOrientation = (e) => setOrientation(e.matches ? "portrait" : "landscape");
-
-            updateOrientation(mediaQuery);
-            mediaQuery.addEventListener("change", updateOrientation);
-
-            return () => mediaQuery.removeEventListener("change", updateOrientation);
-        }
-    }, [orientation]);
-
-
+    const orientation = useOrientation()
 
     function switchImage(action){
         //Prevent multiple Click
@@ -61,6 +48,7 @@ export default function ImageViewerPage(){
                     src={changeIcon}
                     width={65}
                     height={65}
+                    loading="lazy"
                     className={`absolute z-20 ${orientation === "landscape" ? "right-5" : "bottom-10 left-5"} rotate-180 absolute z-10 left-5 hover:scale-125 active:scale-95 transition-transform duration-150`}
                     onClick={() => switchImage("preview")}
                 />
@@ -76,12 +64,15 @@ export default function ImageViewerPage(){
                                     alt={currentImage.prez}
                                     width={currentImage.width}
                                     height={currentImage.height}
+                                    priority={true}
+                                    sizes="(max-width: 768px) 100vw, 80vw"
                                     className="object-contain w-full h-full"
                                 />
                             :
                                 <video
                                     autoPlay
                                     loop
+                                    preload="metadata"
                                     className="object-contain w-full h-full"
                                 >
                                     <source
@@ -126,6 +117,7 @@ export default function ImageViewerPage(){
                     src={changeIcon}
                     width={65}
                     height={65}
+                    loading="lazy"
                     className={`${orientation === "landscape" ? "absolute z-10 right-5" : "absolute bottom-10 right-5"} hover:scale-125 active:scale-95 transition-transform duration-150`}
                     onClick={() => switchImage("next")}
                 />
@@ -135,6 +127,7 @@ export default function ImageViewerPage(){
                         src={closeIcon}
                         width={35}
                         height={35}
+                        loading="lazy"
                         className={`absolute z-10 top-2 ${orientation === "landscape" ? "right-5" : "right-0"} hover:scale-125 active:scale-95 transition-transform duration-150`}
                     />
                 </Link>
