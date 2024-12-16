@@ -1,10 +1,9 @@
 import Image from "next/image";
 import circleMazeTop from "@/assets/img/circle-maze-top.png"
 import { didactGhotic, arsenal, beginner } from "@/lib/Fonts/fonts"
+import Tr from "@/lib/Translation/Translation";
 
-export default function Bandeau(props){
-
-    const { lg, tr } = props
+export default function Bandeau(){
 
     return (
         <div className={`flex flex-col sm:flex-row justify-center sm:justify-between items-center w-full bg-yellowTheme`}>
@@ -14,8 +13,8 @@ export default function Bandeau(props){
             </div>
             <div className="flex justify-center items-center">
                 <div className="relative sm:absolute right-0 sm:right-[78px]">
-                    <h1 className="text-redTitle text-xl md:text-3xl">{tr("bandeau_title", lg)}</h1>
-                    <p className={`text-end line leading-[14px] text-redTitle text-[8px] ${arsenal.className} hover:cursor-zoom-in hover:text-[14px]`}>{tr("bandeau_subtitle", lg)}</p>
+                    <h1 className="text-redTitle text-xl md:text-3xl"><Tr target="bandeau_title" /></h1>
+                    <p className={`text-end line leading-[14px] text-redTitle text-[8px] ${arsenal.className} hover:cursor-zoom-in hover:text-[14px]`}><Tr target="bandeau_subtitle" /></p>
                 </div>
             </div>
             {/* Image circleMaze */}

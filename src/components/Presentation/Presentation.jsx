@@ -3,16 +3,15 @@ import portrait from "@/assets/img/portrait_gilles.jpg"
 import trombone from "@/assets/img/trombone.png"
 import mailIcon from "@/assets/img/mailIcon.png"
 import mysterion from "@/assets/img/mysterion.png"
+import Tr from "@/lib/Translation/Translation";
 
-export default function Presentation(props){
-
-    const { lg, tr } = props
+export default function Presentation(){
 
     return(
         <div className="flex flex-col justify-center items-center w-full relative">
             <div className="flex flex-col justify-center w-full md:w-[65%] p-4 md:p-16 mt-20 pb-20 md:pb-32 shadow-xl mb-32 md:mb-0 pt-0 md:pt-32">
                 {/* Block title */}
-                <h2 className="w-full pb-4 text-4xl text-redTitle font-semibold">{tr("prez_title", props.lg)}</h2>
+                <h2 className="w-full pb-4 text-4xl text-redTitle font-semibold"><Tr target="prez_title" /></h2>
                 {/* Block content */}
                 <div className="w-full">
                     <Image
@@ -23,10 +22,10 @@ export default function Presentation(props){
                         className="rounded-full float-left m-4 shadow-md shadow-redTitle"
                     />
                     <div className="md:text-xl text-base">
-                        <p className="pb-2">{tr('prez_p_one', lg)}</p>
-                        <p className="pb-2">{tr('prez_p_two', lg)}</p>
-                        <p className="pb-2">{tr('prez_p_three', lg)}</p>
-                        <p>{tr('prez_p_four', lg)} </p>
+                        <p className="pb-2"><Tr target='prez_p_one' /></p>
+                        <p className="pb-2"><Tr target='prez_p_two' /></p>
+                        <p className="pb-2"><Tr target='prez_p_three' /></p>
+                        <p><Tr target='prez_p_four' /></p>
                     </div>
                 </div>
                 {/* Rappel Contact */}

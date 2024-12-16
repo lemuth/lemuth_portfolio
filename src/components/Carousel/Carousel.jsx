@@ -7,10 +7,14 @@ import {
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Tr from "@/lib/Translation/Translation";
+import { LangageContext } from "@/hooks/contextProvider"
+import { useContext } from "react";
 
 export default function Carousel(props){
 
-    const { slides, options, lg, tr } = props
+    const { langage } = useContext(LangageContext)
+    const { slides, options } = props
     const [emblaRef, emblaApi] = useEmblaCarousel(options)
     
     const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
@@ -40,7 +44,7 @@ export default function Carousel(props){
                                                 <p className='font-semibold'>{value.type}</p>
                                                 <p>{"Type"}</p>
                                             </div>
-                                            <p className='pt-6 font-s'>{value[`prez_${lg}`]}</p>
+                                            <p className='pt-6 font-s'>{value[`prez_${langage}`]}</p>
                                         </div>
                                         <div className='flex justify-center md:pt-6 pt-0 w-full'>
                                             {
@@ -95,7 +99,7 @@ export default function Carousel(props){
                                                 rel="noopener noreferrer"
                                                 className='w-full text-center text-xl border-2 border-redTitle border-opacity-0 hover:border-opacity-100 rounded-xl bg-redTitle/75'
                                             >
-                                                {tr("carousel_link", lg)}</Link>
+                                                <Tr target="carousel_link" /></Link>
                                             </div>
                                         }
                                     </div>

@@ -1,17 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { pictureListe } from "../Data/Data";
+import { pictureListe } from "../../lib/Data/Data";
 import cartman from "@/assets/img/occulus_cartman.png"
+import Tr from "@/lib/Translation/Translation";
 
-export default function Bonus3d(props){
-
-    const { lg, tr } = props
+export default function Bonus3d(){
 
     return(
         <div className="flex flex-col justify-center items-center w-full relative pt-10">
             <div className="flex flex-col justify-center w-full md:w-[80%] items-center p-6 relative">
                 
-                <h2 className="w-full mb-10 text-4xl text-redTitle font-semibold text-center">{tr("bonus_title", lg)}</h2>
+                <h2 className="w-full mb-10 text-4xl text-redTitle font-semibold text-center"><Tr target="bonus_title" /></h2>
 
                 <div className="flex flex-wrap items-stretch justify-center">
                     {

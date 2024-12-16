@@ -4,7 +4,7 @@ import { useState } from "react"
 import changeIcon from "@/assets/img/nextPict.png"
 import closeIcon from "@/assets/img/close.png"
 import Link from "next/link"
-import { pictureListe } from "@/components/Data/Data"
+import { pictureListe } from "@/lib/Data/Data"
 import { useOrientation } from "@/hooks/useOrientation"
 import { beginner } from "@/lib/Fonts/Fonts"
 

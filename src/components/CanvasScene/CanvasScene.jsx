@@ -11,13 +11,10 @@ import rideauTop from "@/assets/img/rideau_top.png"
 import leftMouse from "@/assets/img/left_mouse.png"
 import rightMouse from "@/assets/img/right_mouse.png"
 import moletteMouse from "@/assets/img/molette_mouse.png"
-import { pannelData } from "../Data/Data";
+import { pannelData } from "../../lib/Data/Data";
+import Tr from "@/lib/Translation/Translation";
 
-
-
-export default function CanvasScene(props) {
-
-    const { lg, tr }                                = props
+export default function CanvasScene() {
     const [ leftPannelStatus, setLeftPannelStatus ] = useState(true)
     const [ openingLat, setOpeningLat ]             = useState(false)
     const [ openingTop, setOpeningTop ]             = useState(false)
@@ -60,21 +57,21 @@ export default function CanvasScene(props) {
                     <div className={`flex-col p-4 border-r-2 border-yellowTheme text-white`}>
                         <div className="flex pb-2 justify-between items-center">
                             <Image src={leftMouse} width={35} alt="leftMouse" />
-                            <p className="pl-4">{tr("cs_hlp_rotate", lg)}</p>
+                            <p className="pl-4"><Tr target="cs_hlp_rotate" /></p>
                         </div>
                         <div className="flex pb-2 justify-between items-center">
                             <Image src={rightMouse} width={35} alt="rightMouse" />
-                            <p className="pl-4">{tr("cs_hlp_move", lg)}</p>
+                            <p className="pl-4"><Tr target="cs_hlp_move" /></p>
                         </div>
                         <div className="flex pb-2 justify-between items-center">
                             <Image src={moletteMouse} width={35} alt="moletteMouse" />
-                            <p className="pl-4">{tr("cs_hlp_zoom", lg)}</p>
+                            <p className="pl-4"><Tr target="cs_hlp_zoom" /></p>
                         </div>
                         <button
                             className="flex w-full justify-center items-center bg-yellowTheme rounded-lg py-1 text-black  active:bg-yellow-500 shadow-md shadow-gray-800"
                             onClick={() => orbitRef.current.reset()}
                         >
-                            {tr("cs_hlp_reset", lg)}
+                            <Tr target="cs_hlp_reset" />
                             <Image className="ml-2" src={target} width={25} alt="target" />
                         </button>
                     </div>
@@ -118,7 +115,7 @@ export default function CanvasScene(props) {
                 </div>
                 {/* Rideau */}
                 <div className={`flex absolute w-full h-full ${isOpen ? 'hidden' : 'show'}`} onClick={() => start()}>
-                    <button className={`px-8 py-4 bg-white text-gray-500 shadow-lg shadow-black ${arsenal.className} animate-pulse rounded-lg absolute top-[45%] md:left-[48%] left-[35%] z-20 ${openingLat && "hidden"}`}>{tr("cs_curtain_btn", lg)}</button>
+                    <button className={`px-8 py-4 bg-white text-gray-500 shadow-lg shadow-black ${arsenal.className} animate-pulse rounded-lg absolute top-[45%] md:left-[48%] left-[35%] z-20 ${openingLat && "hidden"}`}><Tr target="cs_curtain_btn" /></button>
                     <Image src={rideauTop} alt="rideauLateralTop" className={`w-1/2 h-1/6 absolute z-10 ${openingTop && "transition-all duration-400 ease-in translate-y-[-100%]"}`} />
                     <Image src={rideauTop} alt="rideauLateralTop" className={`w-1/2 h-1/6 absolute z-10 right-0 ${openingTop && "transition-all duration-400 ease-in translate-y-[-100%]"}`} />
                     <Image src={rideauLat} alt="rideauLateralLeft" className={`w-1/2 h-full ${openingLat && "transition-all duration-1000 ease-in translate-x-[-100%]"}`} />
