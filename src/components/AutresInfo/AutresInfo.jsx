@@ -1,14 +1,9 @@
 import Image from "next/image"
-import localFont from 'next/font/local'
 import addLogo from "@/assets/img/addLogo.png"
 import soustractLogo from "@/assets/img/soustractLogo.png"
 import stano from "@/assets/img/stano.png"
+import { playwriteHRLijeva } from "@/lib/Fonts/Fonts"
 
-const playwriteHRLijeva = localFont({
-    src: "../../assets/fonts/PlaywriteHRLijeva-VariableFont_wght.ttf",
-    weight: '400',
-    display: 'swap',
-})
 
 export default function AutresInfo(props) {
     const { lg, tr } = props

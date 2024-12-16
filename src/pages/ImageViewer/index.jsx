@@ -4,14 +4,9 @@ import { useState } from "react"
 import changeIcon from "@/assets/img/nextPict.png"
 import closeIcon from "@/assets/img/close.png"
 import Link from "next/link"
-import { Edu_VIC_WA_NT_Beginner } from "next/font/google"
 import { pictureListe } from "@/components/Data/Data"
 import { useOrientation } from "@/hooks/useOrientation"
-
-const beginner = Edu_VIC_WA_NT_Beginner({
-    subsets: ['latin'],
-    weight: '400'
-})
+import { beginner } from "@/lib/Fonts/Fonts"
 
 export default function ImageViewerPage(){
 

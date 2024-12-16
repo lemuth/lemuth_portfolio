@@ -3,7 +3,9 @@ import { useGLTF } from '@react-three/drei'
 import FakeGlowMaterial from '../FakeGlowMaterial/FakeGlowMaterial'
 
 export default function Model(props) {
+
     const { nodes, materials } = useGLTF('./models/spScene.glb')
+    
     return (
         <group {...props} dispose={null}>
         <mesh

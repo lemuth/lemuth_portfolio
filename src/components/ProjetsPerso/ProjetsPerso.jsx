@@ -2,13 +2,7 @@ import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 import kyle from "@/assets/img/kyle.png"
 import double_arrow from "@/assets/img/double_arrow.png"
-import { Edu_VIC_WA_NT_Beginner } from "next/font/google"
-
-const beginner = Edu_VIC_WA_NT_Beginner({
-    subsets: ['latin'],
-    weight: '400'
-})
-
+import { beginner } from "@/lib/Fonts/Fonts"
 
 export default function ProjetsPerso(props){
 

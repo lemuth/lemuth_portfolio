@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRef, useState } from "react"
-import { Arsenal } from "next/font/google";
+import { arsenal } from "@/lib/Fonts/Fonts";
 import SPScene from "@/components/spScene/spScene"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls } from "@react-three/drei";
@@ -11,123 +11,9 @@ import rideauTop from "@/assets/img/rideau_top.png"
 import leftMouse from "@/assets/img/left_mouse.png"
 import rightMouse from "@/assets/img/right_mouse.png"
 import moletteMouse from "@/assets/img/molette_mouse.png"
-import jsIcon from "@/assets/img/JavaScript-logo.png"
-import photoshopIcon from "@/assets/img/Photoshop_CC_icon.png"
-import sqlIcon from "@/assets/img/sql_logo.png"
-import mongoIcon from "@/assets/img/mongodb_logo.png"
-import nextIcon from "@/assets/img/nextjs_logo.png"
-import htmlIcon from "@/assets/img/html_logo.png"
-import threeIcon from "@/assets/img/three-js-logo.png"
-import typescriptIcon from "@/assets/img/Typescript_logo_2020.svg.png"
-import reactIcon from "@/assets/img/react-logo.png"
-import tailwindIcon from "@/assets/img/tailwind_logo.png"
-import cssIcon from "@/assets/img/css_logo.png"
-import nodeIcon from "@/assets/img/node_logo.png"
+import { pannelData } from "../Data/Data";
 
-// fonts
-const arsenal = Arsenal({
-    subsets: ['latin'],
-    weight: '400'
-})
 
-const pannelData =[
-    {
-        id: 1,
-        img: jsIcon,
-        title: 'JavaScript',
-        level: 4,
-        content_fr: 'JavaScript est le langage principal dans tous mes projets depuis que je code. J\'aime suivre ses nombreuses évolutions et adapter mon code en conséquence.',
-        content_en: 'JavaScript has been the main language in all my projects since I started coding. I enjoy following its many evolutions and adapting my code accordingly.',
-    },
-    {
-        id: 2,
-        img: photoshopIcon,
-        title: 'Photoshop',
-        level: 3,
-        "content_fr": "J'utilisais Photoshop avant de savoir coder ! Détourage, modifications, formats d'images, je connais assez bien Photoshop pour me sentir libre dans mon travail.",
-        "content_en": "I used Photoshop before I knew how to code! Clipping, modifications, image formats, I know Photoshop well enough to feel free in my work.",
-    },
-    {
-        id: 3,
-        img: sqlIcon,
-        title: 'SQL',
-        level: 4,
-        content_fr: "Le SQL est un langage que j'ai souvent utilisé dans ma pratique du développement web.",
-        content_en: "SQL is a language that I have often used in my web development practice.",
-    },
-    {
-        id:4,
-        img: mongoIcon,
-        title: 'MongoDB',
-        level: 3,
-        content_fr: "Je n'ai travaillé que sur des projets personnels avec MongoDB, mais son format JavaScript-friendly me permet de l'appréhender rapidement.",
-        content_en: "I have only worked on personal projects with MongoDB, but its JavaScript-friendly format allows me to grasp it quickly.",
-    },
-    {
-        id: 5,
-        img: nextIcon,
-        title: 'NextJs',
-        level: 3,
-        content_fr: "Je travaille sur tous mes projets depuis deux ans avec Next.js. Il est vite devenu un incontournable pour moi.",
-        content_en: "I have been working on all my projects with Next.js for the past two years. It quickly became essential for me.",
-    },
-    {
-        id: 6,
-        img: htmlIcon,
-        title: 'Html',
-        level: 4,
-        content_fr: "Je pratique le langage HTML depuis le début de mon aventure de codeur. Je suis sûr que je n'en connais pas toutes les subtilités, mais on se connaît bien, lui et moi.",
-        content_en: "I have been using HTML since the beginning of my coding journey. I'm sure I don't know all its subtleties, but we know each other well.",
-    },
-    {
-        id: 7,
-        img: threeIcon,
-        title: 'ThreeJs',
-        level: 2,
-        content_fr: "J'aime particulièrement la 3D puisque je modélise mes propres meshes et conçois mes textures. Three.js me permet de mettre mes compétences en 3D au service du web.",
-        content_en: "I particularly love 3D as I model my own meshes and design my textures. Three.js allows me to bring my 3D skills to the web.",
-    },
-    {
-        id: 8,
-        img: typescriptIcon,
-        title: 'TypeScript',
-        level: 2,
-        content_fr: "J'ai intégré TypeScript dans mes derniers projets personnels. Je ne suis pas encore familier avec tous ses aspects, mais j'en connais les bases.",
-        content_en: "I have integrated TypeScript into my recent personal projects. I'm not yet familiar with all its aspects, but I know the basics.",
-    },
-    {
-        id: 9,
-        img: reactIcon,
-        title: 'React',
-        level: 4,
-        content_fr: "J'intègre React dans tous mes projets depuis 4 ans, j'ai l'habitude de manipuler ses Hooks, et j'apprécie également la bibliothèque Redux.",
-        content_en: "I have been using React in all my projects for the past 4 years, I'm used to working with its Hooks, and I also enjoy using the Redux library.",
-    },
-    {
-        id: 10,
-        img: tailwindIcon,
-        title: 'Tailwind',
-        level: 3,
-        content_fr: "Je travaille avec Tailwind dans tous mes projets depuis 2 ans.",
-        content_en: "I have been working with Tailwind in all my projects for 2 years.",
-    },
-    {
-        id: 11,
-        img: cssIcon,
-        title: 'CSS',
-        level: 4,
-        content_fr: "Je pratique le CSS depuis mes débuts en programmation, j'ai une préférence pour les flexbox.",
-        content_en: "I have been practicing CSS since the beginning of my coding journey, and I have a preference for flexbox.",
-    },
-    {
-        id: 12,
-        img: nodeIcon,
-        title: 'NodeJs',
-        level: 3,
-        content_fr: "Je pratique Node.js depuis 5 ans. Je connais bien Express.js, Firebase, et j'ai récemment exploré un peu Nest.js.",
-        content_en: "I have been working with Node.js for 5 years. I am familiar with Express.js, Firebase, and have recently dabbled a bit in Nest.js.",
-    },
-]
 
 export default function CanvasScene(props) {
 
