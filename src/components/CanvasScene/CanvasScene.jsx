@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRef, useState } from "react"
-import { arsenal } from "@/lib/Fonts/Fonts";
+import { arsenal } from "@/lib/Fonts/googleFonts";
 import SPScene from "@/components/spScene/spScene"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls } from "@react-three/drei";

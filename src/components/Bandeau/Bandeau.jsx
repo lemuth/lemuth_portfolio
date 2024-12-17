@@ -1,6 +1,6 @@
 import Image from "next/image";
 import circleMazeTop from "@/assets/img/circle-maze-top.png"
-import { didactGhotic, arsenal, beginner } from "@/lib/Fonts/fonts"
+import { didactGhotic, arsenal, beginner } from "@/lib/Fonts/googleFonts"
 import Tr from "@/lib/Translation/Translation";
 
 export default function Bandeau(){

@@ -11,7 +11,7 @@ import Experiences from "@/components/Experiences/Experiences";
 import ProjetsPerso from "@/components/ProjetsPerso/ProjetsPerso";
 import Bonus3d from "@/components/Bonus3d/Bonus3d";
 import Footer from "@/components/Footer/Footer";
-import { arsenal } from "@/lib/Fonts/Fonts";
+import { arsenal } from "@/lib/Fonts/googleFonts";
 
 export default function Home() {
 

@@ -2,7 +2,7 @@ import Image from "next/image"
 import addLogo from "@/assets/img/addLogo.png"
 import soustractLogo from "@/assets/img/soustractLogo.png"
 import stano from "@/assets/img/stano.png"
-import { playwriteHRLijeva } from "@/lib/Fonts/Fonts"
+import { playwriteHRLijeva } from "@/lib/Fonts/otherFonts"
 import Tr from "@/lib/Translation/Translation";
 
 export default function AutresInfo() {

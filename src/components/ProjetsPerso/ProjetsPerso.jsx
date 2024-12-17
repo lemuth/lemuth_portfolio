@@ -2,7 +2,7 @@ import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 import kyle from "@/assets/img/kyle.png"
 import double_arrow from "@/assets/img/double_arrow.png"
-import { beginner } from "@/lib/Fonts/Fonts"
+import { beginner } from "@/lib/Fonts/googleFonts"
 import Tr from "@/lib/Translation/Translation";
 
 export default function ProjetsPerso(){
