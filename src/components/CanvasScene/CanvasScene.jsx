@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useRef, useState } from "react"
+import { useContext, useRef, useState } from "react"
 import { arsenal } from "@/lib/Fonts/googleFonts";
 import SPScene from "@/components/spScene/spScene"
 import { Canvas } from "@react-three/fiber"
@@ -13,8 +13,10 @@ import rightMouse from "@/assets/img/right_mouse.png"
 import moletteMouse from "@/assets/img/molette_mouse.png"
 import { pannelData } from "../../lib/Data/Data";
 import Tr from "@/lib/Translation/Translation";
+import { LangageContext } from "@/hooks/contextProvider"
 
 export default function CanvasScene() {
+    const { langage } = useContext(LangageContext);
     const [ leftPannelStatus, setLeftPannelStatus ] = useState(true)
     const [ openingLat, setOpeningLat ]             = useState(false)
     const [ openingTop, setOpeningTop ]             = useState(false)
@@ -92,7 +94,7 @@ export default function CanvasScene() {
                         activePannel.isActive &&
                         pannelData.map((data, key) => {
                             if(data.id === activePannel.id){
-                                let content = `content` + `_${lg}`
+                                let content = `content` + `_${langage}`
                                 return(
                                     <div
                                         key={key}
@@ -131,7 +133,7 @@ export default function CanvasScene() {
                     activePannel.isActive &&
                     pannelData.map((data, key) => {
                         if(data.id === activePannel.id){
-                            let content = `content` + `_${lg}`
+                            let content = `content` + `_${langage}`
                             return(
                                 <div
                                     key={key}
