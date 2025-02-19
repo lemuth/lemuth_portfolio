@@ -19,7 +19,9 @@ export default function Presentation(){
                         width={85}
                         height={85}
                         alt="portrait"
-                        className="rounded-full float-left m-4 shadow-md shadow-redTitle"
+                        className="float-left m-4 rounded-full shadow-md shadow-redTitle"
+                        style={{ width: '85px', height: '85px' }}
+                        priority
                     />
                     <div className="md:text-xl text-base">
                         <p className="pb-2"><Tr target='prez_p_one' /></p>

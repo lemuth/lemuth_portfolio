@@ -66,7 +66,7 @@ export default function ProjetsPerso(){
                                             src={double_arrow}
                                             alt="arrow"
                                             width={30}
-                                            className={`${articleOpen === "sofa" && "rotate-180" }`}
+                                            className={`h-auto ${articleOpen === "sofa" && "rotate-180" }`}
                                         />
                                     </div>
                                 }

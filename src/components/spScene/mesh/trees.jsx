@@ -1,0 +1,56 @@
+export default function Trees({nodes, materials}) {
+    return (
+        <group>
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Tree001001.geometry}
+                material={materials}
+                scale={0.001}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Tree002001.geometry}
+                material={materials}
+                scale={0.001}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Tree003001.geometry}
+                material={materials}
+                scale={0.001}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Tree004001.geometry}
+                material={materials}
+                scale={0.001}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Tree005001.geometry}
+                material={materials}
+                scale={0.001}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Tree006001.geometry}
+                material={materials}
+                scale={0.001}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Tree007001.geometry}
+                material={materials}
+                position={[0, 0, -1.118]}
+                scale={0.001}
+            />
+        </group>
+    )
+}

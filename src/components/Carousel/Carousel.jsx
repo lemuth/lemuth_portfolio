@@ -68,7 +68,7 @@ export default function Carousel(props){
                                                         if(value.images.length === 3){
                                                             return(
                                                                 <div  key={key}>
-                                                                    <Image src={img} width={200} height={374} alt={img} />
+                                                                    <Image src={img} width={200} height={374} alt={img} priority />
                                                                 </div>
                                                             )
                                                         }

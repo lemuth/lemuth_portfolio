@@ -9,26 +9,27 @@ import CanvasScene from "@/components/CanvasScene/CanvasScene";
 import Presentation from "@/components/Presentation/Presentation";
 import Experiences from "@/components/Experiences/Experiences";
 import ProjetsPerso from "@/components/ProjetsPerso/ProjetsPerso";
-import Bonus3d from "@/components/Bonus3d/Bonus3d";
 import Footer from "@/components/Footer/Footer";
+import BookScene from "@/components/Book/BookScene";
 import { arsenal } from "@/lib/Fonts/googleFonts";
+import { BookPageContextProvider } from "@/hooks/contextProvider";
 
 export default function Home() {
 
   const dbRef = ref(getDatabase());
 
-  useEffect(() => {
-    get(child(dbRef, `visites`)).then((snapshot) => {
-      if (snapshot.exists()) {
-        const value = snapshot.val().count;
-        update(ref(rtdb, 'visites'), {count: value +1})
-      } else {
-        console.log("No data available");
-      }
-    }).catch((error) => {
-      console.error(error);
-    });
-  },[])
+  // useEffect(() => {
+  //   get(child(dbRef, `visites`)).then((snapshot) => {
+  //     if (snapshot.exists()) {
+  //       const value = snapshot.val().count;
+  //       update(ref(rtdb, 'visites'), {count: value +1})
+  //     } else {
+  //       console.log("No data available");
+  //     }
+  //   }).catch((error) => {
+  //     console.error(error);
+  //   });
+  // },[])
 
   return (
     <main>
@@ -41,7 +42,9 @@ export default function Home() {
         <Experiences />
         <ProjetsPerso />
         <AutresInfo />
-        <Bonus3d  />
+        <BookPageContextProvider>
+          <BookScene />
+        </BookPageContextProvider>
         <Footer />
       </div>
     </main>

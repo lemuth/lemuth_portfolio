@@ -16,7 +16,7 @@ import Tr from "@/lib/Translation/Translation";
 import { LangageContext } from "@/hooks/contextProvider"
 
 export default function CanvasScene() {
-    const { langage } = useContext(LangageContext);
+    const { langage }                               = useContext(LangageContext);
     const [ leftPannelStatus, setLeftPannelStatus ] = useState(true)
     const [ openingLat, setOpeningLat ]             = useState(false)
     const [ openingTop, setOpeningTop ]             = useState(false)
