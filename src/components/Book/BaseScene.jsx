@@ -1,9 +1,10 @@
-import { Environment, Float, OrbitControls } from "@react-three/drei";
+import { Environment, Float, OrbitControls, SoftShadows } from "@react-three/drei";
 import Book from "@/components/Book/Book";
 
 export default function BaseScene(){
     return (
         <>
+            <SoftShadows size={25} samples={20} focus={0.5} />
             <Float
                 rotation-x={-Math.PI / 4}
                 floatIntensity={1}

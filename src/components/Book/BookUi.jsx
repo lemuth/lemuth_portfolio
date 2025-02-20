@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { BookPageContext } from "@/hooks/contextProvider";
 import UseWindowsSize from "@/hooks/useWindowsSize"
 
@@ -58,6 +58,15 @@ export const BookUi = () => {
 
     const {bookPage, setBookPage} = useContext(BookPageContext);
     const {width} = UseWindowsSize()
+    const pageSoundRef = useRef()
+
+    function turnPage(id){
+        if(bookPage !== id){
+            const soundClone = pageSoundRef.current.cloneNode();
+            soundClone.play();
+            setBookPage(id)
+        } else {return}
+    }
 
     return (
         <>
@@ -73,7 +82,7 @@ export const BookUi = () => {
                                     ? "bg-white/90 text-black"
                                     : "bg-black/30 text-white"
                                 }`}
-                                onClick={() => setBookPage(index)}
+                                onClick={() => turnPage(index)}
                             >
                                 {index === 0 ? "Couverture" : `Page ${index}`}
                             </button>
@@ -84,12 +93,14 @@ export const BookUi = () => {
                                 ? "bg-white/90 text-black"
                                 : "bg-black/30 text-white"
                             } ${width > 996 ? "text-lg px-4 py-3" : "text-sm px-2 py-2"}`}
-                            onClick={() => setBookPage(pages.length)}
+                            onClick={() => turnPage(pages.length)}
                         >
                             Verso
                         </button>
                     </div>
                 </div>
+                <audio src="/lemuth_portfolio/sound/one-page-book-flip.mp3" ref={pageSoundRef} />
+                {/* <audio src="/sound/one-page-book-flip.mp3" ref={pageSoundRef} /> */}
             </main>
         </>
     );
