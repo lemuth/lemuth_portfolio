@@ -1,7 +1,7 @@
 import { useContext, useEffect, useMemo, useRef, useState } from "react"
 import { pages } from "./BookUi"
 import { Bone, BoxGeometry, Color, Float32BufferAttribute, MathUtils, MeshStandardMaterial, Skeleton, SkeletonHelper, SkinnedMesh, SRGBColorSpace, Uint16BufferAttribute, Vector3 } from "three"
-import { useCursor, useHelper, useTexture } from "@react-three/drei"
+import { Html, useCursor, useHelper, useTexture } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
 import { degToRad } from "three/src/math/MathUtils"
 import bookCoverRouhness from "@/assets/img/bonus/book-cover-roughness.jpg"
@@ -74,7 +74,7 @@ pages.forEach((page) => {
     useTexture.preload(bookCoverRouhness.src)
 })
 
-const Page = ({number, front, back, page, opened, bookClosed, ...props}) => {
+const Page = ({number, front, back, page, opened, bookClosed, turnPage, ...props}) => {
 
     const groupRef = useRef()
     const turnedAt = useRef(0)
@@ -218,13 +218,14 @@ const Page = ({number, front, back, page, opened, bookClosed, ...props}) => {
                 setHighlighted(true)
             }}
             onPointerLeave={(e) => {
-                e.stopPropagation();
+                e.stopPropagation()
                 setHighlighted(false)
             }}
             onClick={(e) => {
                 e.stopPropagation()
                 setBookPage(opened ? number : number + 1)
                 setHighlighted(false)
+                turnPage()
             }}
         >
             <primitive
@@ -240,6 +241,11 @@ export default function Book ( {...props} ){
 
     const {bookPage} = useContext(BookPageContext)
     const [delayedPage, setDelayedPage] = useState(bookPage)
+    const pageSoundRef = useRef()
+
+    function turnPage() {
+        if(pageSoundRef.current) pageSoundRef.current.play()
+    }
 
     useEffect(() => {
         let timeOut
@@ -269,22 +275,28 @@ export default function Book ( {...props} ){
     }, [bookPage])
 
     return (
-        <group {...props} rotation-y={-Math.PI / 2}>
-            {
-                [...pages].map((pageData, index) => {
-                    return(
-                        <Page
-                            key={index}
-                            page={delayedPage}
-                            number={index}
-                            opened={delayedPage > index}
-                            bookClosed={delayedPage === 0 || delayedPage === pages.length}
-                            {...pageData}
-                        />
-                    )
+        <>
+            <group {...props} rotation-y={-Math.PI / 2}>
+                {
+                    [...pages].map((pageData, index) => {
+                        return(
+                            <Page
+                                key={index}
+                                page={delayedPage}
+                                number={index}
+                                opened={delayedPage > index}
+                                bookClosed={delayedPage === 0 || delayedPage === pages.length}
+                                turnPage= {turnPage}
+                                {...pageData}
+                            />
+                        )
 
-                })
-            }
-        </group>
+                    })
+                }
+            </group>
+            <Html>
+                <audio src="/lemuth_portfolio/sound/one-page-book-flip.mp3" ref={pageSoundRef} />
+            </Html>
+        </>
     )
 }
