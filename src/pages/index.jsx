@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { getDatabase, ref, get, child, update } from "firebase/database";
 import { rtdb } from "@/lib/firebase/firebaseconfig";
 import LangageSwitcher from "@/components/LangageSwitcher/LangageSwitcher";
@@ -6,30 +6,30 @@ import Header from "@/components/Header/Header";
 import Bandeau from "@/components/Bandeau/Bandeau";
 import AutresInfo from "@/components/AutresInfo/AutresInfo";
 import CanvasScene from "@/components/CanvasScene/CanvasScene";
-import Presentation from "@/components/Presentation/Presentation";
 import Experiences from "@/components/Experiences/Experiences";
 import ProjetsPerso from "@/components/ProjetsPerso/ProjetsPerso";
 import Footer from "@/components/Footer/Footer";
 import BookScene from "@/components/Book/BookScene";
 import { arsenal } from "@/lib/Fonts/googleFonts";
 import { BookPageContextProvider } from "@/hooks/contextProvider";
+import TypingPrez from "@/components/TypingPrez/TypingPrez";
 
 export default function Home() {
 
   const dbRef = ref(getDatabase());
 
-  // useEffect(() => {
-  //   get(child(dbRef, `visites`)).then((snapshot) => {
-  //     if (snapshot.exists()) {
-  //       const value = snapshot.val().count;
-  //       update(ref(rtdb, 'visites'), {count: value +1})
-  //     } else {
-  //       console.log("No data available");
-  //     }
-  //   }).catch((error) => {
-  //     console.error(error);
-  //   });
-  // },[])
+  useEffect(() => {
+    get(child(dbRef, `visites`)).then((snapshot) => {
+      if (snapshot.exists()) {
+        const value = snapshot.val().count;
+        update(ref(rtdb, 'visites'), {count: value +1})
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
+  },[])
 
   return (
     <main>
@@ -38,7 +38,7 @@ export default function Home() {
         <LangageSwitcher />
         <Bandeau />
         <CanvasScene />
-        <Presentation />
+        <TypingPrez />
         <Experiences />
         <ProjetsPerso />
         <AutresInfo />

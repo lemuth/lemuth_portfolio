@@ -7,13 +7,14 @@ import Link from "next/link"
 import Tr from "@/lib/Translation/Translation";
 import { useContext } from "react"
 import { LangageContext } from "@/hooks/contextProvider"
+import { mulish } from "@/lib/Fonts/googleFonts"
 
 export default function Footer() {
 
     const { langage } = useContext(LangageContext);
 
     return(
-        <div className="flex flex-col md:flex-row w-full justify-center items-center border-t-8 border-double border-yellowTheme bg-redTitle">
+        <div className={`flex flex-col md:flex-row w-full justify-center items-center border-t-8 border-double border-yellowTheme bg-redTitle ${mulish.className}`}>
             {/* remerciements/gitHub */}
             <div className="flex items-center left-0 md:p-0 py-4">
                 <Image src={circleMazeBt} width={150} height={150} alt="circleMazeBt" className="w-1/3 sm:w-1/8" />

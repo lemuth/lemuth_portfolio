@@ -77,7 +77,7 @@ export const BookUi = () => {
                         {[...pages].map((_, index) => (
                             <button
                                 key={index}
-                                className={`border-transparent hover:border-white transition-all duration-300 rounded-full ${width > 996 ? "text-lg px-4 py-3" : "text-sm px-2 py-2"} uppercase border shadow-xl ${
+                                className={`border-transparent hover:border-white transition-all duration-300 rounded-full ${width > 996 ? "px-4 py-3" : "text-sm px-2 py-2"} uppercase border shadow-xl ${
                                 index === bookPage
                                     ? "bg-white/90 text-black"
                                     : "bg-black/30 text-white"

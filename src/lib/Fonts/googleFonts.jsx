@@ -1,4 +1,4 @@
-import {Arsenal, Edu_VIC_WA_NT_Beginner, Didact_Gothic} from "next/font/google"
+import {Arsenal, Edu_VIC_WA_NT_Beginner, Didact_Gothic, Mulish} from "next/font/google"
 
 const arsenal = Arsenal({
     subsets: ['latin'],
@@ -12,9 +12,14 @@ const beginner = Edu_VIC_WA_NT_Beginner({
     subsets: ['latin'],
     weight: '400'
 })
+const mulish = Mulish({
+    subsets: ['latin'],
+    weight: '400'
+})
 
 export {
     arsenal,
     didactGhotic,
-    beginner
+    beginner,
+    mulish
 }

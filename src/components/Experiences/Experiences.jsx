@@ -3,13 +3,14 @@ import Carousel from "../Carousel/Carousel"
 import kenny from "@/assets/img/kenny.png"
 import { experiencesData } from "../../lib/Data/Data";
 import Tr from "@/lib/Translation/Translation";
+import { mulish } from "@/lib/Fonts/googleFonts";
 
 export default function Experiences(){
 
     const options = { direction: 'rtl' }
 
     return (
-        <div className="flex flex-col justify-center items-center w-full relative md:mt-40 mt-5">
+        <div className={`flex flex-col justify-center items-center w-full relative md:mt-40 mt-5 ${mulish.className}`}>
             {/* Block title */}
             <h2 className="w-full pb-4 text-4xl text-redTitle font-semibold text-center"><Tr target="carousel_title" /></h2>
             <div className="md:w-[65%] w-full flex-col justify-center items-center p-6  shadow-xl relative">

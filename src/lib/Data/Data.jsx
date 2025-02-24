@@ -1,14 +1,3 @@
-
-// pictureListe
-// import streetProject from "@/assets/img/bonus/TP-street_project.jpg"
-// import tcInt from "@/assets/img/bonus/TeakCell-vue-interieur-final.jpg"
-// import tcExt from "@/assets/img/bonus/TeakCell-vue-exterieur-final.jpg"
-// import mecha from "@/assets/img/bonus/MTF-filaire.jpg"
-// import lfd from "@/assets/img/bonus/TP-street_in_fire.jpg"
-// import moonoeuf from "@/assets/img/bonus/CM-moonoeuf-02.jpg"
-// import vestiaire from "@/assets/img/bonus/CM-vestiaire-01.jpg"
-// import bureau from "@/assets/img/bonus/CM-bureau-02.jpg"
-
 // experiencesData
 import lery1 from "@/assets/img/projets/lery-poses-design-intro.jpg"
 import lery2 from "@/assets/img/projets/lery-poses-design-tools.jpg"
@@ -41,18 +30,6 @@ import reactIcon from "@/assets/img/react-logo.png"
 import tailwindIcon from "@/assets/img/tailwind_logo.png"
 import cssIcon from "@/assets/img/css_logo.png"
 import nodeIcon from "@/assets/img/node_logo.png"
-
-// const pictureListe = [
-//     {id:0, type: "img", path: [streetProject], width: 2048, height: 1556, widthMin: 256, heightMin: 194, title: "Cyber Street", prez: "ruelle inspiration cyberpunk"},
-//     {id:1, type: "img", path: [tcInt], width: 2048, height: 1536, widthMin: 256, heightMin: 194, title: "Bungalow Intérieur", prez: "bungalow pour la société teakCell vue interieur"},
-//     {id:2, type: "img", path: [tcExt], width: 2048, height: 1536, widthMin: 356, heightMin: 194, title: "Bungalow Extérieur", prez: "bungalow pour la société teakCell vue exterieur"},
-//     {id:3, type: "img", path: [mecha], width: 2880, height: 2160, widthMin: 259, heightMin: 194, title: "Mécha Filaire", prez: "mecha vue graphique"},
-//     {id:4, type: "img", path: [lfd], width: 1280, height: 960, widthMin: 259, heightMin: 194, title: "Last Night in VDR", prez: "projet de map pour le jeu leftfordead"},
-//     {id:5, type: "img", path: [moonoeuf], width: 3508, height: 2480, widthMin: 274, heightMin: 194, title: "CM-MoonOeuf", prez: "création pour le film croquemeurtre MoonOeuf"},
-//     {id:6, type: "img", path: [vestiaire], width: 2956, height: 1672, widthMin: 343, heightMin: 194, title: "CM-vestiaire", prez: "création pour le film croquemeurtre vestiaire"},
-//     {id:7, type: "img", path: [bureau], width: 1280, height: 723, widthMin: 343, heightMin: 194, title: "CM-Bureau", prez: "création pour le film croquemeurtre bureau"},
-//     {id:8, type: "vid", path: "/lemuth_portfolio/video/CM-cerveau-vid.mp4", width: 1280, height: 723, widthMin: 259, heightMin: 194, title: "Fauteuil des réflexions", prez: ""},
-// ]
 
 const experiencesData = [
     {
@@ -360,9 +337,55 @@ const translator = {
     },
 }
 
+const prezContent = (langage) => {
+    if(langage === "fr"){
+        return (
+            [
+                { action: "type", text: "Vous êtes à la recherche d'un développeur front-end pour rejoindre votre équipe ?\n"},
+                { action: "type", text: "Un développeur passionné par ce qu'il fait et aimant relever des défis divers ? Je suis peut-être celui que vous recherchez !\n"},
+                { action: "type", text: "Pour me présenter rapidement, j'ai eu plusieurs vies professionnelles et me suis passionné pour le code il y a 7/8 ans ...... Et GnaGnaGna, je SUIS le dev qu'il vous faut ! .... PFFFff ! Mais quel texte de merde !!! Grosse lassitude... Bon allez on recommence.."},
+                { action: "type", text: "Bienvenue sur mon Portfolio ! Tout d'abord, merci d'être venu jeter un coup d'oeil à mon travail. Alors installer vous confortablement et j'éspère que vous apprécierez ce petit moment, ca restera entre nous :)\n"},
+                { action: "type", text: "Ce site est pour moi un terrain d'éxperimentations et d'expression ou je m'amuse avant tout"},
+                { action: "delete", count: 18},
+                { action: "type", text: "cherche avant tout à prendre du plaisir. Si vous êtes sensible à ma proposition et que vous apréciez ce site, nous sommes peut être fait pour nous entendre."},
+                { action: "delete", count: 14},
+                { action: "type", text: "travailler ensemble. \n" },
+                { action: "type", text: "N'hésitez pas à me recontacter pour échanger, et voyons ensemble ce sur quoi nous pouvons nous projeter. \n"},
+                { action: "type", text: "Bien amicalement, Gilles"},
+            ]
+        ) 
+    } else {
+        return (
+            [
+                { action: "type", text: "Are you looking for a front-end developer to join your team ? \n"},
+                { action: "type", text: "A developer who is passionate about their work and enjoys tackling various challenges? I might be the one you're searching for!\n"},
+                { action: "type", text: "To introduce myself quickly, I've had several professional lives and became passionate about coding 7-8 years ago... And BlahBlahBlah, I AM the dev you need! ... PFFFff! What a crappy text!!! Feeling so fed up... Alright, let's start over."},
+                { action: "type", text: "Welcome to my Portfolio! First of all, thank you for taking a look at my work. So, make yourself comfortable, and I hope you enjoy this little moment—just between us.\n"},
+                { action: "type", text: "This site is a playground for experimentation and expression where I primarily have fun."},
+                { action: "delete", count: 9},
+                { action: "type", text: "seek to enjoy myself. If you resonate with my approach and appreciate this site, we might just be a perfect match."},
+                { action: "delete", count: 16},
+                { action: "type", text: " meant to work together. \n"},
+                { action: "type", text: "Feel free to reach out to me so we can discuss and see what we can envision together. \n"},
+                { action: "type", text: "Best regards, Gilles"},
+            ]
+        )
+    }
+}
+// prez_p_one: "Are you looking for a front-end developer to join your team? ",
+// prez_p_two: "A developer who is passionate about their work and enjoys tackling various challenges? I might be the one you're searching for.",
+// prez_p_three: "To introduce myself briefly, I have had multiple professional experiences and became passionate about coding 7-8 years ago. I then became a freelancer and primarily developed applications for local companies looking to update their internal processes. I have always strived to evolve over time in my preferred technology, JavaScript.",
+// prez_p_four: "I now wish to join a team to continue growing, share my knowledge, and meet clients' needs, of course! If my profile matches what you're looking for, feel free to contact me!",
+
+//     prez_p_one: "Vous êtes à la recherche d'un développeur front-end pour rejoindre votre équipe?",
+//     prez_p_two: "Un développeur passionné par ce qu'il fait et aimant relever des défis divers ? Je suis peut-être celui que vous recherchez.",
+//     prez_p_three: "Pour me présenter rapidement, j'ai eu plusieurs vies professionnelles et me suis passionné pour le code il y a 7/8 ans. Je me suis ensuite installé en freelance et ai développé principalement des applications pour des sociétés locales désireuses de mettre à jour leurs process internes. Je me suis toujours attaché à évoluer au fil du temps dans ma technologie de prédilection, le JavaScript.",
+//     prez_p_four: "Je souhaite aujourd\'hui rejoindre une équipe pour continuer à évoluer, partager nos connaissances et répondre aux besoins des clients, bien sûr ! Si mon profil correspond à ce que vous recherchez, n'hésitez pas à me contacter !",
+
+
 export {
-    // pictureListe,
     experiencesData,
     pannelData,
-    translator
+    translator,
+    prezContent
 }

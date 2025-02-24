@@ -2,7 +2,7 @@ import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 import kyle from "@/assets/img/kyle.png"
 import double_arrow from "@/assets/img/double_arrow.png"
-import { beginner } from "@/lib/Fonts/googleFonts"
+import { beginner, mulish } from "@/lib/Fonts/googleFonts"
 import Tr from "@/lib/Translation/Translation";
 
 export default function ProjetsPerso(){
@@ -35,7 +35,7 @@ export default function ProjetsPerso(){
     }, [width])
 
     return (
-        <div className="flex flex-col justify-center items-center w-full relative">
+        <div className={`flex flex-col justify-center items-center w-full relative ${mulish.className}`}>
             <div className="flex flex-col justify-center w-full md:w-[65%] p-4 md:p-16 mt-20 pb-20 md:pb-32 shadow-xl mb-32 md:mb-0 pt-0 md:pt-32">
                 {/* Block title */}
                 <div className="flex flex-col md:flex-row">

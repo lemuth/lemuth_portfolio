@@ -6,13 +6,14 @@ import Tr from "@/lib/Translation/Translation";
 import Image from "next/image";
 import cartman from "@/assets/img/occulus_cartman.png"
 import UseWindowsSize from "@/hooks/useWindowsSize"
+import { mulish } from "@/lib/Fonts/googleFonts";
 
 export default function BookScene(){
 
-    const {width, height} = UseWindowsSize()
+    const {width} = UseWindowsSize()
 
     return (
-        <div className={`flex flex-col justify-center items-center w-full h-[145vh] ${ width > 1470 && "px-40"} bg-redTitle`}>
+        <div className={`flex flex-col justify-center items-center w-full h-[145vh] ${ width > 1470 && "px-40"} ${mulish.className} bg-redTitle`}>
             <h2 className={`w-full ${width > 996 ? "text-4xl" : "text-xl"} text-yellowTheme font-semibold text-center`}>
                 <Tr target="bonus_title" />
             </h2>
