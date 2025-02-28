@@ -64,7 +64,7 @@ export default function TypingPrez() {
                             }
     
                             setText([...paragrapheList, currentText])
-                            await new Promise((resolve) => setTimeout(resolve, time))
+                            await new Promise((resolve) => setTimeout(resolve, 40))
 
                     }
                 } else if (step.action === "delete") {
@@ -73,7 +73,7 @@ export default function TypingPrez() {
 
                         currentText = currentText.slice(0, -1)
                         setText([...paragrapheList, currentText])
-                        await new Promise((resolve) => setTimeout(resolve, time))
+                        await new Promise((resolve) => setTimeout(resolve, 40))
                     }
                 }
                 if(index === 2) {
